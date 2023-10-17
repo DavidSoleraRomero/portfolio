@@ -1,0 +1,16 @@
+/*********************************************/
+/*  Hoja de estilo de lentejas.html          */
+/*  Autor: David Solera Romero               */
+/*  Versión: 1.0                             */
+/*  Fecha: Octubre / 2023                    */
+/*  Comentario: Ejercicio para Portfolio (I) */
+/*********************************************/
+
+* {box-sizing: border-box;}
+
+body {background-color: grey;}
+
+#wrapper {
+    width: 80%;
+    margin: auto;
+}
