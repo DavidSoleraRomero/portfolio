@@ -24,7 +24,8 @@
 
 body {background-image: url("../images/fondolegumbres.avif");
     margin: 0;
-    font-size: 1.3rem;}
+    font-size: 1.3rem;
+    color: rgb(19, 39, 0);}
 #wrapper {
     width: 74%;
     padding: 2.25%;
@@ -62,12 +63,12 @@ blockquote {
     width: 70%;
     border-right: 3px solid black;
     border-left: 3px solid black;
-    padding-left: 12.5px;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 55px;
+    padding-bottom: 55px;
     margin-left: 15%;
     font-style: italic;
     background-color: rgb(116, 180, 77);
+    text-align: center;
 }
 ul {
     list-style-image: url("../images/bulletlist.png");
