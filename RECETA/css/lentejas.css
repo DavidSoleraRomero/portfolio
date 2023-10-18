@@ -6,11 +6,91 @@
 /*  Comentario: Ejercicio para Portfolio (I) */
 /*********************************************/
 
-* {box-sizing: border-box;}
+/* Enlace a archivos externos */
 
-body {background-color: grey;}
-
-#wrapper {
-    width: 80%;
-    margin: auto;
+@font-face {
+    font-family: textonormal;
+    src: url(../fonts/GlacialIndifference-Regular.otf);
 }
+
+@font-face {
+    font-family: titulos;
+    src: url(../fonts/Lusiana.OTF.otf);
+}
+
+/* Layout general */
+
+* {box-sizing: border-box;} /* Indica que el width de cada caja será contando el borde */
+
+body {background-image: url("../images/fondolegumbres.avif");
+    margin: 0;
+    font-size: 1.3rem;}
+#wrapper {
+    width: 74%;
+    padding: 2.25%;
+    margin: auto;
+    background-color: rgb(55, 170, 35);
+    font-family: textonormal;
+}
+h1,h2 {
+    font-family: titulos;
+    text-align: center;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px black;
+    width: 30%;
+    margin: auto;
+    
+    background-color: rgb(158, 241, 106);
+}
+h1 {
+    font-size: 2.05em;
+    padding-top: 10px;
+}
+h2 {
+    font-size: 1.15em;
+    margin-top: 3.5%;
+    margin-bottom: 5%;
+    padding: 5px 0px;
+}
+#primerh2 {
+    margin-top: 1.5%;
+}
+blockquote {
+    width: 70%;
+    border-right: 3px solid black;
+    border-left: 3px solid black;
+    padding-left: 12.5px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-left: 15%;
+    font-style: italic;
+    background-color: rgb(116, 180, 77);
+}
+ul {
+    list-style-image: url("../images/bulletlist.png");
+}
+ul li {
+    padding-bottom: 5px;
+}
+ol li {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid rgb(0,0,0,0.5);    
+}
+li {
+    margin-left: 10%;
+    margin-right: 9%;
+}
+dl dt {
+    font-weight: bold;
+    margin-left: 10%;
+}
+dl dd {
+    margin-left: 12.5%;
+    padding: 15px 0px;
+}
+
+/* Sección a sección en detalle */
