@@ -128,6 +128,17 @@ dl dd {
     padding: 15px 0px;
 }
 
+/* #lentejas {  Forzamos la imagen a portarse como un bloque y la centramos.
+    width:50%;  
+    display:block;
+    margin:auto;
+}
+/* #lentejas2 { 
+    width: 25%;
+    float: right;
+    o también float: left;
+}
+
 /* Media Queries para responsividad */
 @media only screen and (width<= 1050px){
     #wrapper {width:95%;}
