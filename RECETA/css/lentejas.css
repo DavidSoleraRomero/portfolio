@@ -22,7 +22,7 @@
 
 * {box-sizing: border-box;} /* Indica que el width de cada caja será contando el borde */
 
-body {background-image: url("../img/fondolegumbres.avif");
+body {background-image: url("../img/fondolegumbres.jpg");
     margin: 0;
     font-size: 1.3rem;
     color: rgb(19, 39, 0);}
