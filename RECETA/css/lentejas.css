@@ -48,7 +48,7 @@ h1,h2 {
     background-color: rgb(151, 255, 137);
 }
 h1 {
-    font-size: 2.05em;
+    font-size: 1.90em;
     padding-top: 10px;
 }
 h2 {
@@ -149,10 +149,12 @@ dl dd {
 @media only screen and (width<= 1050px){
     #wrapper {width:95%;}
     h1 {
-        width: 47%;
+        width: 50%;
+        font-size: 1.8em;
     }
     h2 {
-        width: 37.5%;
+        width: 40%;
+        font-size: 1em;
     }
     li {
         margin-left: 4%;
