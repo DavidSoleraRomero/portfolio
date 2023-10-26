@@ -30,7 +30,7 @@ body {background-image: url("../images/fondolegumbres.avif");
     width: 74%;
     padding: 2.25%;
     margin: auto;
-    background-color: rgb(131, 214, 117);
+    background-color: rgb(167, 236, 154);
     font-family: textonormal;
 }
 
@@ -45,7 +45,7 @@ h1,h2 {
     box-shadow: 5px 5px 5px black;
     width: 30%;
     margin: auto;
-    background-color: rgb(158, 241, 106);
+    background-color: rgb(151, 255, 137);
 }
 h1 {
     font-size: 2.05em;
@@ -70,7 +70,7 @@ blockquote {
     padding-bottom: 55px;
     margin-left: 15%;
     font-style: italic;
-    background-color: rgb(93, 223, 81);
+    background-color: rgb(144, 255, 134);
     text-align: center;
     text-shadow: 4px 4px 17px black;
     padding-left: 11px;
@@ -98,6 +98,10 @@ blockquote {
     background-position: center center;
     height: 425px;
     width: 455px;
+}
+
+#ingredientes .texto-alternativo {
+    font-family: titulos;
 }
 
 ul {
@@ -151,7 +155,9 @@ dl dd {
     li {
         margin-left: 4%;
     }
-    
+    blockquote {
+        text-shadow: 2px 2px 10px black;
+    }
     }
 @media only screen and (width<= 1250px){ 
     #ingredientes .contenedor-img {
@@ -171,5 +177,17 @@ dl dd {
     }
     #ingredientes .texto { 
         margin-left: 0%;
+    }
+    #ingredientes .texto-alternativo {
+        display: none;
+    }
+    h1, h2 {
+        margin-bottom: 5.5%;
+    }
+    h2 {
+        margin-top: 5.5%
+    }
+    #primerh2 {
+        margin-top: 5.5%;
     }
 }
