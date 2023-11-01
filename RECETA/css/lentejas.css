@@ -27,7 +27,7 @@ body {background-image: url("../img/fondolegumbres.jpg");
     font-size: 1.3rem;
     color: rgb(19, 39, 0);}
 #wrapper {
-    width: 74%;
+    width: 82.5%;
     padding: 2.25%;
     margin: auto;
     background-color: rgb(167, 236, 154);
@@ -147,7 +147,7 @@ dl dd {
 
 /* Media Queries para responsividad */
 @media only screen and (width<= 1050px){
-    #wrapper {width:95%;}
+    #wrapper {width:97.5%;}
     h1 {
         width: 52.5%;
         font-size: 1.79em;
