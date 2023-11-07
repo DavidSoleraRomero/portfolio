@@ -26,6 +26,29 @@
             <source src="./sound/buuu.mp3" type="audio/mp3">
         </audio>
 
+        <div id="church" onmouseover="show('monster');sound('jumpscaresound')" onmouseout="hide('monster');silence('jumpscaresound')"></div>
+        <div id="church2" onmouseover="show('monster');sound('jumpscaresound')" onmouseout="hide('monster');silence('jumpscaresound')"></div>
+        <img id="monster" src="./img/jumpscare.gif" alt="">
+        <audio loop id="jumpscaresound">
+            <source src="./sound/jumpscare.mp3" type="audio/mp3">
+        </audio>
+
+        <div id="crow" onmouseover="sound('crowsound')"></div>
+        <audio id="crowsound">
+            <source src="./sound/cuervo.mp3" type="audio/mp3">
+        </audio>
+
+        <div id="grillo" onclick="sound('cricketsound')"></div>
+        <audio id="cricketsound">
+            <source src="./sound/grillo.mp3" type="audio/mp3">
+        </audio>
+
+        <div id="lamp" onclick="sound('lampsound')"></div>
+        <div id="candles" onclick="sound('lampsound')"></div>
+        <audio id="lampsound">
+            <source src="./sound/fuego.mp3" type="audio/mp3">
+        </audio>
+
     </div>
 </body>
 </html>
