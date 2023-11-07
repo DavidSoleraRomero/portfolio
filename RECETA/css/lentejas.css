@@ -22,15 +22,15 @@
 
 * {box-sizing: border-box;} /* Indica que el width de cada caja será contando el borde */
 
-body {background-image: url("../images/fondolegumbres.avif");
+body {background-image: url("../img/fondolegumbres.jpg");
     margin: 0;
     font-size: 1.3rem;
     color: rgb(19, 39, 0);}
 #wrapper {
-    width: 74%;
+    width: 82.5%;
     padding: 2.25%;
     margin: auto;
-    background-color: rgb(131, 214, 117);
+    background-color: rgb(167, 236, 154);
     font-family: textonormal;
 }
 
@@ -45,10 +45,10 @@ h1,h2 {
     box-shadow: 5px 5px 5px black;
     width: 30%;
     margin: auto;
-    background-color: rgb(158, 241, 106);
+    background-color: rgb(151, 255, 137);
 }
 h1 {
-    font-size: 2.05em;
+    font-size: 1.90em;
     padding-top: 10px;
 }
 h2 {
@@ -70,7 +70,7 @@ blockquote {
     padding-bottom: 55px;
     margin-left: 15%;
     font-style: italic;
-    background-color: rgb(93, 223, 81);
+    background-color: rgb(144, 255, 134);
     text-align: center;
     text-shadow: 4px 4px 17px black;
     padding-left: 11px;
@@ -91,7 +91,7 @@ blockquote {
     margin-left: 6%;
 }
 #ingredientes .contenedor-img {
-    background-image: url("../images/lentejas.png");
+    background-image: url("../img/lentejas.png");
     margin-top: 30px;
     margin-left: 20%;
     background-size: cover;
@@ -100,8 +100,12 @@ blockquote {
     width: 455px;
 }
 
+#ingredientes .texto-alternativo {
+    font-family: titulos;
+}
+
 ul {
-    list-style-image: url("../images/bulletlist.png");
+    list-style-image: url("../img/bulletlist.png");
 }
 ul li {
     padding-bottom: 5px;
@@ -128,10 +132,12 @@ dl dd {
     padding: 15px 0px;
 }
 
-/* #lentejas {  Forzamos la imagen a portarse como un bloque y la centramos.
-    width:50%;  
+#lentejas { 
+    margin-top: 4%;
+    width:50%;
     display:block;
     margin:auto;
+    border-radius: 50px;
 }
 /* #lentejas2 { 
     width: 25%;
@@ -141,17 +147,21 @@ dl dd {
 
 /* Media Queries para responsividad */
 @media only screen and (width<= 1050px){
-    #wrapper {width:95%;}
+    #wrapper {width:97.5%;}
     h1 {
-        width: 47%;
+        width: 52.5%;
+        font-size: 1.79em;
     }
     h2 {
-        width: 37.5%;
+        width: 40%;
+        font-size: 1em;
     }
     li {
         margin-left: 4%;
     }
-    
+    blockquote {
+        text-shadow: 2px 2px 10px black;
+    }
     }
 @media only screen and (width<= 1250px){ 
     #ingredientes .contenedor-img {
@@ -171,5 +181,17 @@ dl dd {
     }
     #ingredientes .texto { 
         margin-left: 0%;
+    }
+    #ingredientes .texto-alternativo {
+        display: none;
+    }
+    h1, h2 {
+        margin-bottom: 5.5%;
+    }
+    h2 {
+        margin-top: 5.5%
+    }
+    #primerh2 {
+        margin-top: 25px;
     }
 }
