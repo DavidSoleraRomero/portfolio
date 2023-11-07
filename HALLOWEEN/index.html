@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halloween Page</title>
+    <!-- Hoja de estilos -->
+    <link rel="stylesheet" href="./css/halloween.css">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./img/pumpking-icon.png" type="image/x-icon">
+    <!-- JavaScript -->
+    <script src="./js/halloween.js"></script>
+</head>
+<body>
+    <div id="escenario">
+
+        <div id="pumpkin" onmouseover="show('bats');sound('batsound')" onmouseout="hide('bats');silence('batsound')"></div>
+        <img id="bats" src="./img/bat2.gif" alt="">
+        <audio id="batsound">
+            <source src="./sound/" type="audio/mp3">
+        </audio>
+
+        <div id="ghost" onclick="show('ghosts')" ondblclick="hide('ghosts')"></div>
+        <img id="ghosts" src="./img/ghost.gif" alt="">
+        <audio src="./sound/"></audio>
+
+    </div>
+</body>
+</html>
