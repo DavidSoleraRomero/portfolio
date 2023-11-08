@@ -16,7 +16,7 @@
 
         <div id="pumpkin" onmouseover="show('bats');sound('batsound')" onmouseout="hide('bats');silence('batsound')"></div>
         <img id="bats" src="./img/bat2.gif" alt="">
-        <audio id="batsound">
+        <audio loop id="batsound">
             <source src="./sound/risad.mp3" type="audio/mp3">
             This browser can't play this audio
         </audio>
@@ -53,6 +53,16 @@
         <audio id="lampsound">
             <source src="./sound/fuego.mp3" type="audio/mp3">
             This browser can't play this audio
+        </audio>
+
+        <div id="gate" ondblclick="show('girl');show('guy');sound('gates');sound('breath')" onclick="hide('girl');hide('guy');silence('gates');silence('breath')"></div>
+        <img id="girl" src="./img/creepy.gif" alt="">
+        <img id="guy" src="./img/creepy2.gif" alt="">
+        <audio id="gates">
+            <source src="./sound/rejas.mp3" type="audio/mp3">
+        </audio>
+        <audio loop id="breath">
+            <source src="./sound/respiración.mp3" type="audio/mp3">
         </audio>
 
     </div>
