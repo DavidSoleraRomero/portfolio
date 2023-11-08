@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Halloween Page</title>
-    <!-- Hoja de estilos -->
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="./css/halloween.css">
     <!-- Favicon -->
     <link rel="shortcut icon" href="./img/pumpking-icon.png" type="image/x-icon">
@@ -18,35 +18,41 @@
         <img id="bats" src="./img/bat2.gif" alt="">
         <audio id="batsound">
             <source src="./sound/risad.mp3" type="audio/mp3">
+            This browser can't play this audio
         </audio>
 
-        <div id="ghost" onclick="show('ghosts');sound('ghostsound')" ondblclick="hide('ghosts');silence('ghostsound')"></div>
+        <div id="ghost" onclick="show('ghosts');sound('ghostsound')" onmouseout="hide('ghosts');silence('ghostsound')"></div>
         <img id="ghosts" src="./img/ghost.gif" alt="">
         <audio id="ghostsound">
             <source src="./sound/buuu.mp3" type="audio/mp3">
+            This browser can't play this audio
         </audio>
 
-        <div id="church" onmouseover="show('monster');sound('jumpscaresound')" onmouseout="hide('monster');silence('jumpscaresound')"></div>
-        <div id="church2" onmouseover="show('monster');sound('jumpscaresound')" onmouseout="hide('monster');silence('jumpscaresound')"></div>
+        <div id="church" ondblclick="show('monster');sound('jumpscaresound')" onmouseout="hide('monster');silence('jumpscaresound')"></div>
+        <div id="church2" ondblclick="show('monster');sound('jumpscaresound')" onmouseout="hide('monster');silence('jumpscaresound')"></div>
         <img id="monster" src="./img/jumpscare.gif" alt="">
         <audio loop id="jumpscaresound">
             <source src="./sound/jumpscare.mp3" type="audio/mp3">
+            This browser can't play this audio
         </audio>
 
         <div id="crow" onmouseover="sound('crowsound')"></div>
         <audio id="crowsound">
             <source src="./sound/cuervo.mp3" type="audio/mp3">
+            This browser can't play this audio
         </audio>
 
-        <div id="grillo" onclick="sound('cricketsound')"></div>
+        <div id="cricket" onclick="sound('cricketsound')"></div>
         <audio id="cricketsound">
             <source src="./sound/grillo.mp3" type="audio/mp3">
+            This browser can't play this audio
         </audio>
 
         <div id="lamp" onclick="sound('lampsound')"></div>
         <div id="candles" onclick="sound('lampsound')"></div>
         <audio id="lampsound">
             <source src="./sound/fuego.mp3" type="audio/mp3">
+            This browser can't play this audio
         </audio>
 
     </div>

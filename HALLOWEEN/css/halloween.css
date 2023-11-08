@@ -1,10 +1,10 @@
 /**********************************/
-/*  Hoja de estilo para Halloween */
-/*  Hecha por David Solera Romero */
+/*  Stylesheet for Halloween web  */
+/*  Done by David Solera Romero   */
 /*                                */
-/*     Estudiante de 1º de DAM    */
+/*   DAM Student on Alan Turing   */
 /*                                */
-/*      Fecha: 07 - 11 - 2023     */
+/*      Date: 07 - 11 - 2023      */
 /*                                */
 /**********************************/
 
@@ -25,7 +25,7 @@ body {
     position: relative;
 }
 
-/* Área de la calabaza */
+/* Pumpking area */
 
 #pumpkin {
     width: 350px;
@@ -45,7 +45,7 @@ body {
     visibility: hidden;
 }
 
-/* Área del fantasma */
+/* Ghost area */
 
 #ghost {
     width: 115px;
@@ -63,7 +63,7 @@ body {
     visibility: hidden;
 }
 
-/* Área de la iglesia */
+/* Chuch area */
 
 #church {
     width: 180px;
@@ -88,7 +88,7 @@ body {
     visibility: hidden;
 }
 
-/* Área de los cuervos */
+/* Crows area */
 
 #crow {
     width: 180px;
@@ -97,9 +97,9 @@ body {
     left: 49.85%;
 }
 
-/* Área de la tierra inferior */
+/* Inferior grass area */
 
-#grillo {
+#cricket {
     width: 100%;
     height: 122.5px;
     position: absolute;
@@ -107,7 +107,7 @@ body {
 
 }
 
-/* Área de la farola azul y velas encendidas al lado de la calabaza */
+/* Blue street lamp area and burning candles next to the pumpkin */
 
 #lamp {
     width: 50px;
