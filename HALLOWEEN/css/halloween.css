@@ -30,9 +30,9 @@ body {
 #bats {
     position: absolute;
     left: 65.75%;
-    top: 33.6%;
-    height: 350px;
-    width: 300px;
+    height: 600px;
+    width: 325px;
+    top: 0.95%;
     /*display: none; Alternativa v*/
     visibility: hidden;}
 
