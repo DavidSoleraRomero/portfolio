@@ -8,11 +8,23 @@
 /*                                */
 /**********************************/
 
+@font-face {
+    font-family: texto;
+    src: url(../fonts/halloween3.ttf);
+}
+
+@font-face {
+    font-family: texto2;
+    src: url(../fonts/halloween1.otf);
+}
+
 * {
     box-sizing: border-box;}
 body {
     margin:0;
-    background-color: rgb(11, 11, 11);}
+    background-color: rgb(11, 11, 11);
+    font-family: texto;
+    font-size: 1.8em;}
 #escenario {
     background-image: url(../img/hero4.jpg);
     height: 739px;
@@ -114,8 +126,8 @@ body {
     visibility: hidden;
     position: relative;
     left: 15%;
-    top: 22.5%;
-    width: 92px; }
+    top: 18%;
+    width: 90px; }
 
 /* Faces in the tress */
 #faces1 {
@@ -157,4 +169,37 @@ body {
     width: 200px;
     visibility: hidden;}
     
-/*   */
+/* Black background */
+#behind {
+    position: absolute;
+    padding-right: 36.5%;
+    padding-top: 5%;
+    padding-bottom: 10.5%;
+    top: 0%;
+    padding-left: 32.5%;
+    text-align: center;
+    color: #eb420f;
+    background-image: url(../img/fondo1.jpg);
+    background-repeat: no-repeat;
+    width: 1360px;
+    height: 739px;
+    visibility: visible;}
+#behind #h1-2 {
+    margin-top: 5px;
+    margin-bottom: 17.5px;
+}
+#behind button{
+    padding: 20px 25px;
+    padding-bottom: 25px;
+    font-family: texto2;
+    font-size: 1.25em;
+    background-color: #5c3000;
+    border-color: #f55829;
+    color: #fccc97;
+    border-radius: 25px;
+    margin-top: 2.5%;}
+#behind button:hover {
+    background-color: #221101;
+    border-color: #8a4c06;
+    color: #eb420f;
+    transition-duration: 1.75s;}

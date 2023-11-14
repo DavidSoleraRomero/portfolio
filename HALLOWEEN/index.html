@@ -11,7 +11,11 @@
     <!-- JavaScript -->
     <script src="./js/halloween.js"></script>
 </head>
-<body>
+<body onload="sound('atmosphere')">
+    <audio id="atmosphere">
+        <source src="./sound/ambiente.mp3" type="audio/mp3">
+        This browser can't play this audio
+    </audio>
     <div id="escenario">
 
         <div id="pumpkin" onmouseover="show('bats');sound('batsound')" onmouseout="hide('bats');silence('batsound')"></div>
@@ -75,6 +79,12 @@
             <source src="./sound/murcielago.mp3" type="audio/mp3">
             This browser can't play this audio
         </audio>
+
+        <div id="behind">
+            <h1>WelcOme to the CEMETERY FEAR ATTRACTIoN</h1>
+            <h1 id="h1-2">ARE YoU READY?</h1>
+            <button onclick="sound('gates');hide('behind');silence('atmosphere')" onmouseover="sound('batsound')" onmouseout="silence('batsound')" >@ YEAH, I'M READY @</button>
+        </div>
 
     </div>
 </body>
