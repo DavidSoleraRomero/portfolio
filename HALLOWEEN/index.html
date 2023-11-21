@@ -12,60 +12,56 @@
     <script src="./js/halloween.js"></script>
 </head>
 <body onload="sound('atmosphere')">
-    <audio id="atmosphere">
-        <source src="./sound/ambiente.mp3" type="audio/mp3">
-        This browser can't play this audio
-    </audio>
     <div id="escenario">
-
+        
         <div id="pumpkin" onmouseover="show('bats');sound('batsound')" onmouseout="hide('bats');silence('batsound')"></div>
         <img id="bats" src="./img/bat2.gif" alt="">
-        <audio loop id="batsound">
+        <audio loop id="batsound" preload>
             <source src="./sound/risad.mp3" type="audio/mp3">
             This browser can't play this audio
         </audio>
 
         <div id="ghost" onclick="show('ghosts');sound('ghostsound')" onmouseout="hide('ghosts');silence('ghostsound')"></div>
         <img id="ghosts" src="./img/ghost.gif" alt="">
-        <audio id="ghostsound">
+        <audio id="ghostsound" preload>
             <source src="./sound/buuu.mp3" type="audio/mp3">
             This browser can't play this audio
         </audio>
 
-        <div id="church" ondblclick="show('monster');sound('jumpscaresound')" onmouseout="hide('monster');silence('jumpscaresound')"></div>
-        <div id="church2" ondblclick="show('monster');sound('jumpscaresound')" onmouseout="hide('monster');silence('jumpscaresound')"></div>
+        <div id="church" onclick="show('monster');sound('jumpscaresound');hide('text1');hide('text2');hide('text3');hide('text4')" onmouseout="hide('monster');silence('jumpscaresound');show('text1');show('text2');show('text3');show('text4')"></div>
+        <div id="church2" onclick="show('monster');sound('jumpscaresound');hide('text1');hide('text2');hide('text3');hide('text4')" onmouseout="hide('monster');silence('jumpscaresound');show('text1');show('text2');show('text3');show('text4')"></div>
         <img id="monster" src="./img/jumpscare.gif" alt="">
-        <audio loop id="jumpscaresound">
+        <audio loop id="jumpscaresound" preload>
             <source src="./sound/jumpscare.mp3" type="audio/mp3">
             This browser can't play this audio
         </audio>
 
         <div id="crow" onmouseover="sound('crowsound')"></div>
-        <audio id="crowsound">
+        <audio id="crowsound" preload>
             <source src="./sound/cuervo.mp3" type="audio/mp3">
             This browser can't play this audio
         </audio>
 
         <div id="cricket" onclick="sound('cricketsound')"></div>
-        <audio id="cricketsound">
+        <audio id="cricketsound" preload>
             <source src="./sound/grillo.mp3" type="audio/mp3">
             This browser can't play this audio
         </audio>
 
         <div id="lamp" onclick="sound('lampsound')"></div>
         <div id="candles" onclick="sound('lampsound')"></div>
-        <audio id="lampsound">
+        <audio id="lampsound" preload>
             <source src="./sound/fuego.mp3" type="audio/mp3">
             This browser can't play this audio
         </audio>
 
-        <div id="gate" ondblclick="show('girl');show('guy');sound('gates');sound('breath')" onclick="hide('girl');hide('guy');silence('gates');silence('breath')"></div>
+        <div id="gate" ondblclick="show('girl');show('guy');sound('gates');sound('breath')" onmouseout="hide('girl');hide('guy');silence('gates');silence('breath')"></div>
         <img id="girl" src="./img/creepy.gif" alt="">
         <img id="guy" src="./img/creepy2.gif" alt="">
-        <audio id="gates">
+        <audio id="gates" preload>
             <source src="./sound/rejas.mp3" type="audio/mp3">
         </audio>
-        <audio loop id="breath">
+        <audio loop id="breath" preload>
             <source src="./sound/respiración.mp3" type="audio/mp3">
         </audio>
 
@@ -75,17 +71,25 @@
         <img id="bats2" src="./img/bat2.gif" alt="">
         <img id="bats3" src="./img/bat2.gif" alt="">
         <img id="bats4" src="./img/bat2.gif" alt="">
-        <audio loop id="batsound2">
+        <audio loop id="batsound2" preload>
             <source src="./sound/murcielago.mp3" type="audio/mp3">
             This browser can't play this audio
         </audio>
-
+        
+        <p id="text1">DOnt bother any face...</p>
+        <p id="text2">Care with the ghOst</p>
+        <p id="text3">Go AWAY</p>
+        <p id="text4">Monster... church...</p>
+        
         <div id="behind">
             <h1>WelcOme to the CEMETERY FEAR ATTRACTIoN</h1>
             <h1 id="h1-2">ARE YoU READY?</h1>
             <button onclick="sound('gates');hide('behind');silence('atmosphere')" onmouseover="sound('batsound')" onmouseout="silence('batsound')" >@ YEAH, I'M READY @</button>
         </div>
-
+        <audio id="atmosphere" preload controls>
+            <source src="./sound/ambiente.mp3" type="audio/mp3">
+            This browser can't play this audio
+        </audio>
     </div>
 </body>
 </html>

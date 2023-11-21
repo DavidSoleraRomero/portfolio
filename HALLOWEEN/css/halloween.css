@@ -59,7 +59,7 @@ body {
 #ghosts {
     position: absolute;
     top: 50%;
-    left: 37.5%;
+    left: 38.5%;
     visibility: hidden;}
 
 /* Chuch area */
@@ -170,6 +170,11 @@ body {
     visibility: hidden;}
     
 /* Black background */
+@keyframes siniestro {
+    0% {color: #e0aa0a;}
+    50% {color: #da560f;}
+    to {color: #e0aa0a;}
+}
 #behind {
     position: absolute;
     padding-right: 36.5%;
@@ -178,16 +183,23 @@ body {
     top: 0%;
     padding-left: 32.5%;
     text-align: center;
-    color: #eb420f;
+    color: #e0aa0a;
     background-image: url(../img/fondo1.jpg);
     background-repeat: no-repeat;
     width: 1360px;
     height: 739px;
-    visibility: visible;}
+    visibility: visible;
+    animation-name: siniestro;
+    animation-duration: 3.25s;
+    animation-iteration-count: 10;}
 #behind #h1-2 {
     margin-top: 5px;
+    padding-left: 10px;
     margin-bottom: 17.5px;
-}
+    color: #e0aa0a;
+    animation-name: siniestro;
+    animation-duration: 3.25s;
+    animation-iteration-count: 10;}
 #behind button{
     padding: 20px 25px;
     padding-bottom: 25px;
@@ -202,4 +214,64 @@ body {
     background-color: #221101;
     border-color: #8a4c06;
     color: #eb420f;
-    transition-duration: 1.75s;}
+    transition-duration: 1.75s;
+}
+/* Texts */
+#text1 {
+    position: absolute;
+    color: #a5310d;
+    top: 79.75%;
+    left: 68.4%;
+    font-size: 1.1em;
+    margin-bottom: 100px; }
+#text1:hover {
+    color:rgb(255, 21, 0);
+    transition-duration: 2.45s;
+    font-size: 1.25em;
+    top: 78.5%;
+    left: 67.7%;}
+#text2 {
+    position: absolute;
+    color: #b44220;
+    left: 20%;
+    top: 63%;
+}
+#text2:hover {
+    color:rgb(255, 21, 0);
+    transition-duration: 2.25s;
+    font-size: 1.18em;
+    top: 60.25%;
+    left: 20.25%;}
+#text3 {
+    position: absolute;
+    color: #ba3209;
+    left: 50%;
+    top: 33.33%;
+    font-size:0.9em;
+}
+#text3:hover {
+    color:rgb(255, 21, 0);
+    font-size: 1.25em;
+    left: 49%;
+    top: 31%;
+    transition-duration: 1.95s;}
+#text4 {
+    position: absolute;
+    color: #752006;
+    top: 4%;
+    left: 29%;
+}
+#text4:hover {
+    color:rgb(255, 22, 1);
+    font-size: 1.2em;
+    top: 3%;
+    left: 28%;
+    transition-duration: 1.95s;
+}
+#atmosphere {
+    position: absolute;
+    top: 92.5%;
+    right: 1.25px;}
+
+/* Texts and buttons animations */
+
