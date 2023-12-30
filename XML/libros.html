@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accediendo a libros.xml</title>
+</head>
+<body>
+    <script>
+        // ACCEDIENDO A LIBROS.XML
+        
+        // Preguntamos si existe el HTTP Request --> Sirve para solicitar una URL y que solo se actualice una parte de la página
+        if(window.XMLHttpRequest) { // Navegadores modernos
+            xhttp = new XMLHttpRequest();
+        } else { // Navegadores antiguos
+            xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xhttp.open("GET", "libros.xml", false); // Obtiene el documento XML de forma asíncrona
+        xhttp.send(); // Envía el documento XML
+        xmlDoc = xhttp.responseXML; // Almacena el XML
+        titulo = xmlDoc.getElementsByTagName("titulo")[1].childNodes[0].nodeValue; // Obtiene el campo deseado
+        alert("Título: " + titulo); // Muestra el campo por pantalla
+    </script>
+</body>
+</html>

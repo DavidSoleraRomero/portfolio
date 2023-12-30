@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?> <!-- Obligatoria -->
+
+<?xml-stylesheet type="text/css" href="./css/style.css" ?>  <!-- Enlazado a hojas de estilo -->
+
+<!-- Declaración de una entidad (funciona como una variable) -->
+<!DOCTYPE ed_oveja 
+    [<!ENTITY ed_oveja "Editorial Oveja Negra">] 
+> 
+
+<!-- En libros declaramos nombres de espacio (namespaces) con xmlns:"" para diferenciar etiquetas con el mismo nombre y diferente contenido -->
+<libros xmlns:l="https://www.libros.com" xmlns:a="https://autores.com"> <!-- Nodo padre - Plural - SOLO EXISTE UNO - Puede tener muchos hijos -->
+
+    <libro pag="600"> <!-- Nodos hijos - Singular - (pag representa páginas) -->
+
+        <!-- Aquí se hace uso de el CHARACTER DATA SECTION (CDATA), es decir, texto no analizado, por lo que puedo UTILIZAR ETIQUETAS HTML -->
+        <titulo><![CDATA[El Quijote de la Mancha]]></titulo>
+
+        <!-- Caracteres especiales en Cervantes -->
+        <autor nacionalidad="ESP">Miguel de &lt;Cervantes&gt; Savedra</autor>
+
+        <resumen/> <!-- De esta forma se escriben las etiquetas vacías --> 
+        
+        <editorial>Diana</editorial>
+        <fecha>2005</fecha>
+    </libro>
+
+    <libro pag="800"> <!-- Nodos hijos - Singular - (pag representa páginas) -->
+        <!-- En estas dos etiquetas hacemos uso de los namespaces declarados en libros, que significan l:libro y a:autor -->
+        <l:nombre>Cien años de soledad</l:nombre>
+        <a:nombre nacionalidad="COL">Gabriel García Márquez</a:nombre>
+
+        <editorial>Oveja negra</editorial>
+        <fecha>2008</fecha>
+    </libro>
+
+    <libro pag="200"> <!-- Nodos hijos - Singular - (pag representa páginas) -->
+        <titulo>Aprende C sin dolor</titulo>
+        
+        <autores> <!-- Nodo padre -->
+            <autor nacionalidad="USA"> <!-- Nodos hijos -->
+                <nombre>Dennis</nombre> 
+                <apellidos>Ritchie</apellidos>
+            </autor> 
+            <autor nacionalidad="USA"> <!-- Nodos hijos -->
+                <nombre>Brian</nombre> 
+                <apellidos>Kernighan</apellidos>
+            </autor> 
+        </autores>
+
+        <editorial>&ed_oveja;</editorial> <!-- Uso de una entidad -->
+        <fecha>2010</fecha>
+    </libro>
+
+</libros> <!-- Cierre etiqueta padre -->
