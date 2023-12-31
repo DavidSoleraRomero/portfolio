@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accediendo a libros.xml</title>
+</head>
+<body>
+    <script>
+        // ACCEDIENDO A LIBROS.XML
+        // Preguntamos si existe el HTTP Request --> Sirve para solicitar una URL y que solo se actualice una parte de la página
+        if(window.XMLHttpRequest) { // Navegadores modernos
+            xhttp = new XMLHttpRequest();
+        } else { // Navegadores antiguos
+            xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xhttp.open("GET", "libros.xml", false); // Obtiene el documento XML de forma asíncrona
+        xhttp.send(); // Envía el documento XML
+        xmlDoc = xhttp.responseXML; // Almacena el XML
+
+        // Propiedades de XML-DOM
+        /*  x.nodeName --> Nombre del nodo x
+            x.nodeValue --> Valor del nodo x
+            x.parentNode --> Padre del nodo x
+            x.childNodes --> Hijos del nodo x
+            x.attributes --> Atributos del nodo x
+
+        // Métodos de XML-DOM
+            x.getElementsByTagName("nombre") --> Selecciona elementos hijos de x con esa etiqueta
+            x.appendChild(nodo) --> Añade un hijo en x
+            x.removeChild(nodo) --> Elimina el "nodo" hijo de x
+        */
+
+        //
+
+        titulos = xmlDoc.getElementsByTagName("titulo"); // Obtiene el campo deseado
+        for (var i = 0; i < titulos.length; i++) { 
+            // Recorremos los diferentes títulos y los escribimos en el documento
+            document.write(titulos[i].childNodes[0].nodeValue + "<br>");
+        }
+        document.write("<br>");
+        //
+        var libros = xmlDoc.documentElement.childNodes;
+        for (var i = 0; i < libros.length; i++) {
+            // Con este código escribimos: el tipo de Nodo, el nombre y su longitud interna
+            document.write(libros[i].nodeType + ">=" + libros[i].nodeName + ">=" + libros[i].childNodes.length+ "<br>");
+        }
+        document.write("<br>");
+
+        //
+
+        for (var i = 0; i < libros.length; i++) { 
+            // 1 es un elemento / nodo (libro), se aprecia en la escritura anterior
+            if (libros[i].nodeType == 1) {
+                // Sacamos cada libro
+                libro = libros[i].childNodes;
+                // Indicamos su longitud
+                // document.write("Este nodo de libro tiene " + libro.length + " hijos<br>");
+                // Mostramos su título comprobando que el nodo sea equivalente a "titulo"
+                for (var j = 0; j < libro.length; j++) {
+                    if (libro[j].nodeName === "titulo") {
+                        // Aquí accedemos al título del libro y al número de páginas (atributo)
+                        document.write(libro[3].nodeName + ": " + libro[j].childNodes[0].nodeValue + ", "+libros[i].attributes[0].nodeValue +" páginas<br>");
+                    }
+                    if (libro[j].nodeName === "autores") { 
+                        document.write("Autor 1: " + libro[j].childNodes[3].childNodes[3].childNodes[0].nodeValue + "<br>");
+                        document.write("Autor 2: " + libro[j].childNodes[5].childNodes[3].childNodes[0].nodeValue + "<br>");
+                    }
+                    if (libro[j].nodeName === "autor") {
+                        document.write("Autor: " + libro[j].childNodes[0].nodeValue + "<br>")
+                        break;
+                    }
+                }
+            }
+        }
+        document.write("<br>");
+
+        //
+
+        var num = 1;
+        for (var i = 0; i < libros.length; i++) {
+            // 1 es un elemento / nodo (libro)
+            if (libros[i].nodeType == 1) {
+                // Sacamos el valor del atributo de las páginas ("pag") de cada libro
+                var paginas = libros[i].attributes.getNamedItem("pag").nodeValue;
+                var tipo = libros[i].attributes.getNamedItem("tipo").nodeValue;
+                // También podemos sacarlo de esta otra forma > Es un array de atributos de izquierda a derecha en orden de escritura
+                paginas = libros[i].attributes[0].nodeValue;
+                paginas = libros[i].attributes[1].nodeValue;
+                // Lo pintamos en el documento
+                document.write("Páginas del libro nº " + num++ + ": " + paginas + " - Tipo de libro: " + tipo + "<br>");
+            }
+        }
+        
+    </script>
+</body>
+</html>

@@ -8,11 +8,11 @@
 > 
 
 <!-- En libros declaramos nombres de espacio (namespaces) con xmlns:"" para diferenciar etiquetas con el mismo nombre y diferente contenido -->
+<!-- Además, indicar que TODO es un nodo > (las etiquetas, su contenido, los atributos, etc...) -->
 <libros xmlns:l="https://www.libros.com" xmlns:a="https://autores.com"> <!-- Nodo padre - Plural - SOLO EXISTE UNO - Puede tener muchos hijos -->
 
-    <libro pag="600"> <!-- Nodos hijos - Singular - (pag representa páginas) -->
-
-        <!-- Aquí se hace uso de el CHARACTER DATA SECTION (CDATA), es decir, texto no analizado, por lo que puedo UTILIZAR ETIQUETAS HTML -->
+    <libro pag="600" tipo="clásico"> <!-- Nodos hijos - Singular - (pag representa páginas)
+        Aquí se hace uso de el CHARACTER DATA SECTION (CDATA), es decir, texto no analizado, por lo que puedo UTILIZAR ETIQUETAS HTML -->
         <titulo><![CDATA[El Quijote de la Mancha]]></titulo>
 
         <!-- Caracteres especiales en Cervantes -->
@@ -24,16 +24,7 @@
         <fecha>2005</fecha>
     </libro>
 
-    <libro pag="800"> <!-- Nodos hijos - Singular - (pag representa páginas) -->
-        <!-- En estas dos etiquetas hacemos uso de los namespaces declarados en libros, que significan l:libro y a:autor -->
-        <l:nombre>Cien años de soledad</l:nombre>
-        <a:nombre nacionalidad="COL">Gabriel García Márquez</a:nombre>
-
-        <editorial>Oveja negra</editorial>
-        <fecha>2008</fecha>
-    </libro>
-
-    <libro pag="200"> <!-- Nodos hijos - Singular - (pag representa páginas) -->
+    <libro pag="200" tipo="programacion"> <!-- Nodos hijos - Singular - (pag representa páginas) -->
         <titulo>Aprende C sin dolor</titulo>
         
         <autores> <!-- Nodo padre -->
@@ -49,6 +40,15 @@
 
         <editorial>&ed_oveja;</editorial> <!-- Uso de una entidad -->
         <fecha>2010</fecha>
+    </libro>
+
+    <libro pag="800" tipo="moderno"> <!-- Nodos hijos - Singular - (pag representa páginas) -->
+        <!-- En estas dos etiquetas hacemos uso de los namespaces declarados en libros, que significan l:libro y a:autor -->
+        <l:nombre>Cien años de soledad</l:nombre>
+        <a:nombre nacionalidad="COL">Gabriel García Márquez</a:nombre>
+
+        <editorial>Oveja negra</editorial>
+        <fecha>2008</fecha>
     </libro>
 
 </libros> <!-- Cierre etiqueta padre -->

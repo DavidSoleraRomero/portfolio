@@ -8,7 +8,6 @@
 <body>
     <script>
         // ACCEDIENDO A LIBROS.XML
-        
         // Preguntamos si existe el HTTP Request --> Sirve para solicitar una URL y que solo se actualice una parte de la página
         if(window.XMLHttpRequest) { // Navegadores modernos
             xhttp = new XMLHttpRequest();
@@ -18,8 +17,25 @@
         xhttp.open("GET", "libros.xml", false); // Obtiene el documento XML de forma asíncrona
         xhttp.send(); // Envía el documento XML
         xmlDoc = xhttp.responseXML; // Almacena el XML
+        //
         titulo = xmlDoc.getElementsByTagName("titulo")[1].childNodes[0].nodeValue; // Obtiene el campo deseado
-        alert("Título: " + titulo); // Muestra el campo por pantalla
+        tituloLength = xmlDoc.getElementsByTagName("titulo")[1].childNodes.length;
+        document.write(xmlDoc.getElementsByTagName("titulo")[1].childNodes[0].nodeValue);
+        // alert("Título: " + titulo); // Muestra el campo por pantalla
+        alert("Hijos de titulo [1]: " +  tituloLength);
+
+        // Propiedades de XML-DOM
+        /*  x.nodeName --> Nombre del nodo x
+            x.nodeValue --> Valor del nodo x
+            x.parentNode --> Padre del nodo x
+            x.childNodes --> Hijos del nodo x
+            x.attributes --> Atributos del nodo x
+
+        // Métodos de XML-DOM
+            x.getElementsByTagName("nombre") --> Selecciona elementos hijos de x con esa etiqueta
+            x.appendChild(nodo) --> Añade un hijo en x
+            x.removeChild(nodo) --> Elimina el "nodo" hijo de x
+        */
     </script>
 </body>
 </html>
