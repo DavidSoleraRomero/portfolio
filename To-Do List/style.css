@@ -7,4 +7,27 @@
     margin: auto;
 }
 
+ul, li {
+    margin-left: 0;
+    padding-left: 0;
+}
+
 .fa {cursor:pointer;}
+
+.tarea {
+    width: 70%;
+    border: 2px solid black;
+    justify-content: center;
+    display: flex;
+    text-decoration: none;
+}
+
+.tarea span {
+    width: 80%;
+    text-align: center;
+}
+
+@media screen and (width < 850px) {
+    .tarea {width: 100%;}
+}
+
