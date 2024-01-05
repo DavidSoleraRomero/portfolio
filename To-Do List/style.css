@@ -1,0 +1,10 @@
+/* CSS del To-Do List de David Solera Romero */
+
+* {box-sizing: border-box;}
+
+#wrapper {
+    width: 90%;
+    margin: auto;
+}
+
+.fa {cursor:pointer;}

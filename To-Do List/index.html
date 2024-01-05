@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    
+    <div id="wrapper">
+
+        <div id="zonasaludo">
+
+            <h3 id="fecha"></h3>
+            <h1>Bienvenido, David Solera Romero</h1>
+            <h2>Siempre avanza. <b>Paso a paso</b></h2>
+
+        </div>
+
+        <div id="zonatexto">
+
+            <h2>To-Do List</h2>
+            <input type="text" name="entrada_tarea" placeholder="Agrega una tarea" required  required maxlength="50" autofocus>
+            <i id="boton" class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>
+
+        </div>
+
+        <div id="zonatareas">
+
+            <ul>
+                <li>
+                    <i class="fa fa-square" aria-hidden="true"></i>
+                    <!-- Check > <i class="fa fa-check-square" aria-hidden="true"></i> -->
+                    <span id="tarea">Tarea</span>
+                    <i class="fa fa-trash" aria-hidden="true"></i>
+                </li>
+            </ul>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
