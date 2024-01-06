@@ -17,7 +17,67 @@ fecha.innerHTML = obtenerFechaActual();
 
 document.addEventListener("DOMContentLoaded", function() {
     
-    var contadorId = 0;
+    // Obtener el contadorId actual desde localStorage o establecerlo en 0 si no existe
+    var contadorId = parseInt(localStorage.getItem('contadorId')) || 0;
+
+    // Función para pintar las tareas almacenadas al cargar la página
+    function pintarTareasAlCargar() {
+        var tareasGuardadas = JSON.parse(localStorage.getItem('tareas')) || {};
+    
+        // Obtener el contenedor de tareas
+        var unorderderList = document.querySelector("#tareas");
+    
+        // Limpiar el contenedor antes de agregar las tareas
+        unorderderList.innerHTML = "";
+    
+        // Iterar sobre las tareas y agregarlas al contenedor
+        Object.keys(tareasGuardadas).forEach(function (tareaId) {
+            var listElement = document.createElement("li");
+            listElement.id = tareaId;
+            listElement.classList.add("tarea");
+    
+        
+            // Agregar ícono fa-square
+            var iconoCheck = document.createElement("i");
+            iconoCheck.classList.add("fa", "fa-square");
+            listElement.appendChild(iconoCheck);
+        
+            // Obtener y agregar el texto de la tarea
+            var spanElement = document.createElement("span");
+            spanElement.innerHTML = tareasGuardadas[tareaId];
+            spanElement.textContent = spanElement.textContent;
+            listElement.appendChild(spanElement);
+        
+            // Agregar ícono fa-trash
+            var iconoBorrar = document.createElement("i");
+            iconoBorrar.classList.add("fa", "fa-trash");
+            listElement.appendChild(iconoBorrar);
+        
+            unorderderList.appendChild(listElement);
+        });
+    }
+
+    function limpiarTareasDelDOM() {
+        var contenedorTareas = document.querySelector("#tareas");
+        contenedorTareas.innerHTML = "";
+    }
+
+    // Llamar a la función al cargar la página
+    pintarTareasAlCargar();
+
+    // Función para eliminar una tarea de localStorage
+    function eliminarTareaDeLocalStorage(tareaId) {
+        var tareasGuardadas = JSON.parse(localStorage.getItem('tareas')) || {};
+
+        // Verificar si la tarea existe en localStorage
+        if (tareasGuardadas.hasOwnProperty(tareaId)) {
+            // Eliminar la tarea del objeto
+            delete tareasGuardadas[tareaId];
+
+            // Actualizar localStorage
+            localStorage.setItem('tareas', JSON.stringify(tareasGuardadas));
+        }
+    }
 
     /* Eliminamos la tarea correspondiente 
     Utiliza el contenedor común de tareas (ID "tareas"). Es decir, el UL que agrupa todos los LI */
@@ -28,6 +88,11 @@ document.addEventListener("DOMContentLoaded", function() {
         if (event.target.classList.contains("fa-trash")) {
             var tarea = event.target.closest("li");
             tarea.remove();
+            // Eliminar la tarea de localStorage
+            eliminarTareaDeLocalStorage(tarea.id);
+            // Limpiar todas las tareas actuales del DOM
+            limpiarTareasDelDOM();
+            pintarTareasAlCargar();
         }
         // Verifica si el clic ocurrió en la clase "fa-square"
         else if (event.target.classList.contains("fa-square"))  {
@@ -51,10 +116,19 @@ document.addEventListener("DOMContentLoaded", function() {
         return valorTarea !== "";
     }
 
+    // Función para almacenar una tarea completa en localStorage
+    function almacenarTareaEnLocalStorage(id, tareaHTML) {
+        var tareasGuardadas = JSON.parse(localStorage.getItem('tareas'));
+        tareasGuardadas[id] = tareaHTML;
+        localStorage.setItem('tareas', JSON.stringify(tareasGuardadas));
+    }
+
     /* Si valida correctamente, llamamos a creaTarea */
     function creaTarea() {
         var listElement = document.createElement("li");
         listElement.id = "tarea" + contadorId++;
+        // Almacenar el contadorId actualizado en localStorage
+        localStorage.setItem('contadorId', contadorId.toString());
         listElement.classList.add("tarea");
 
         var iconoCheck = document.createElement("i");
@@ -73,6 +147,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
         var unorderderList = document.querySelector("#tareas");
         unorderderList.appendChild(listElement);
+
+         // Almacena la tarea completa en localStorage
+        almacenarTareaEnLocalStorage(listElement.id, listElement.innerHTML);
     }
 
     /* Elegimos el botón */

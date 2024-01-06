@@ -1,10 +1,43 @@
 /* CSS del To-Do List de David Solera Romero */
 
+@font-face {
+    font-family: toDoList;
+    src: url(./TradingPostNF.otf);
+}
+
+@font-face {
+    font-family: texto;
+    src: url(./Andada-Regular.otf);
+}
+
 * {box-sizing: border-box;}
 
-#wrapper {
-    width: 90%;
+#wrapper {    
+    width: 92.5%;
     margin: auto;
+    margin-top: 2.5%;
+    height: 90%;
+    padding: 2rem;
+    border-radius: 1rem;
+    font-size: 1rem;
+    background: rgba(156, 154, 154, 0.1);
+    backdrop-filter: blur(8px);
+    border: 1.5px solid rgba(209, 213, 219, 0.3);
+}
+
+html, body {height: 100%;}
+
+body {
+    font-family: texto;
+    color: rgb(240, 235, 235);
+    background: radial-gradient(ellipse farthest-corner at center center, #515151 0%, #000000 100%);
+    background: -webkit-radial-gradient(ellipse farthest-corner at center center, #515151 0%, #000000 100%);
+    background: -moz-radial-gradient(ellipse farthest-corner at center center, #515151 0%, #000000 100%);
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-image: url("./dark-background-3494082_1920.jpg");
+    margin: 0;
+    padding: 0;
 }
 
 ul, li {
@@ -14,9 +47,32 @@ ul, li {
 
 .fa {cursor:pointer;}
 
+#agregatarea {
+    display: flex;
+    align-items: center;
+}
+
+input[name="entrada_tarea"] {
+    width: 67.4%;
+    height: 50px;
+}
+
+#agregatarea i {
+    font-size: 2em;
+    padding-left: 5px;
+}
+
+#zonatexto h2 {font-family: toDoList;}
+
+#zonatareas {margin-top: 2%;}
+
 .tarea {
     width: 70%;
-    border: 2px solid black;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    font-size: 1em;
+    border: 1px solid black;
+    margin: 7.5px 0px;
     justify-content: center;
     display: flex;
     text-decoration: none;
@@ -25,9 +81,25 @@ ul, li {
 .tarea span {
     width: 80%;
     text-align: center;
+    font-size: 1.7em;
 }
 
-@media screen and (width < 850px) {
+.tarea i {font-size: 2em;}
+
+
+@media screen and (width < 1400px) {
     .tarea {width: 100%;}
+    #wrapper {height: 95%;}
+    .tarea span {font-size: 1.5em;}
+    input[name="entrada_tarea"] {width: 100%;}
+}
+
+@media screen and (width < 650px) {
+    .tarea span {font-size: 1em;}
+    .tarea i {
+        font-size: 1.4em;
+        padding: 0px 12.5px;
+        padding-bottom: 7.5px;
+    }
 }
 
