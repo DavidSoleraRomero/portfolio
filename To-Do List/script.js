@@ -29,17 +29,27 @@ document.addEventListener("DOMContentLoaded", function() {
     
         // Limpiar el contenedor antes de agregar las tareas
         unorderderList.innerHTML = "";
-    
+
         // Iterar sobre las tareas y agregarlas al contenedor
         Object.keys(tareasGuardadas).forEach(function (tareaId) {
             var listElement = document.createElement("li");
             listElement.id = tareaId;
-            listElement.classList.add("tarea");
-    
-        
+
+             // Parsear el HTML de la tarea
+            var parser = new DOMParser();
+            var doc = parser.parseFromString(tareasGuardadas[tareaId], "text/html");
+
+            // Acceder a la clase
+            var claseTarea = doc.body.firstChild.classList[0]; // Solo hay una clase
+            listElement.classList.add(claseTarea); // Añadir la clase al nuevo elemento li
+            
             // Agregar ícono fa-square
             var iconoCheck = document.createElement("i");
-            iconoCheck.classList.add("fa", "fa-square");
+            if (claseTarea === 'tarea') {
+                iconoCheck.classList.add("fa", "fa-square");
+            } else {
+                iconoCheck.classList.add("fa", "fa-check-square");
+            }
             listElement.appendChild(iconoCheck);
         
             // Obtener y agregar el texto de la tarea
@@ -85,8 +95,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     contenedorTareas.addEventListener("click", function(event) {
         // Verifica si el clic ocurrió en la clase "fa-trash"
+        var tarea = event.target.closest("li");
         if (event.target.classList.contains("fa-trash")) {
-            var tarea = event.target.closest("li");
             tarea.remove();
             // Eliminar la tarea de localStorage
             eliminarTareaDeLocalStorage(tarea.id);
@@ -99,12 +109,19 @@ document.addEventListener("DOMContentLoaded", function() {
             var checked = event.target;
             checked.classList.remove("fa-square");
             checked.classList.add("fa-check-square");
+            tarea.classList.remove("tarea");
+            tarea.classList.add("tareachecked");
+            eliminarTareaDeLocalStorage(tarea.id);
+            almacenarTareaEnLocalStorage(tarea.id, tarea.outerHTML);
         }
         // Verifica si el clic ocurrió en la clase "fa-check-square"
         else if (event.target.classList.contains("fa-check-square"))  {
             var checked = event.target;
             checked.classList.remove("fa-check-square");
             checked.classList.add("fa-square");
+            tarea.classList.remove("tareachecked");
+            tarea.classList.add("tarea");
+            almacenarTareaEnLocalStorage(tarea.id, tarea.outerHTML);
         }
     });
 
@@ -118,7 +135,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Función para almacenar una tarea completa en localStorage
     function almacenarTareaEnLocalStorage(id, tareaHTML) {
-        var tareasGuardadas = JSON.parse(localStorage.getItem('tareas'));
+        var tareasGuardadas = JSON.parse(localStorage.getItem('tareas'))  || {};
         tareasGuardadas[id] = tareaHTML;
         localStorage.setItem('tareas', JSON.stringify(tareasGuardadas));
     }
@@ -149,17 +166,21 @@ document.addEventListener("DOMContentLoaded", function() {
         unorderderList.appendChild(listElement);
 
          // Almacena la tarea completa en localStorage
-        almacenarTareaEnLocalStorage(listElement.id, listElement.innerHTML);
+        almacenarTareaEnLocalStorage(listElement.id, listElement.outerHTML);
     }
 
     /* Elegimos el botón */
     var boton = document.getElementById("boton");
     /* Añadimos un evento al botón de "Agregar una tarea" */
     boton.addEventListener("click", function() {
-        if (validaTarea() === true) {
+        var tareasGuardadas = JSON.parse(localStorage.getItem('tareas')) || {};
+        var idsTareas = Object.keys(tareasGuardadas);
+        if (validaTarea() === true && idsTareas.length < 8) {
             creaTarea();
+        } else if (validaTarea() === true) {
+            alert("Complete alguna tarea, por favor");
         } else {
-            alert("Ingrese una tarea, por favor");
+            alert("Ingrese alguna tarea, por favor");
         }
     });
 

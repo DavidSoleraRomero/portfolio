@@ -67,36 +67,54 @@ input[name="entrada_tarea"] {
 #zonatareas {margin-top: 2%;}
 
 .tarea {
+    border-radius: 7.5px;
+    background-color: rgba(145, 97, 8, 0.1);
     width: 70%;
     padding-top: 10px;
     padding-bottom: 5px;
     font-size: 1em;
-    border: 1px solid black;
+    border: 0.25px solid rgb(110, 74, 5);
     margin: 7.5px 0px;
     justify-content: center;
+    align-items: center;
     display: flex;
     text-decoration: none;
 }
 
-.tarea span {
-    width: 80%;
-    text-align: center;
-    font-size: 1.7em;
+.tareachecked {
+    border-radius: 7.5px;
+    background-color: rgba(86, 168, 19, 0.1);
+    width: 70%;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    font-size: 1em;
+    border: 0.25px solid rgb(64, 110, 4);
+    margin: 7.5px 0px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-decoration: none;
 }
 
-.tarea i {font-size: 2em;}
+.tarea span, .tareachecked span {
+    width: 80%;
+    text-align: center;
+    font-size: 1.75em;
+}
+
+.tarea i, .tareachecked i {font-size: 2em;}
 
 
 @media screen and (width < 1400px) {
-    .tarea {width: 100%;}
+    .tarea, .tareachecked {width: 100%;}
     #wrapper {height: 95%;}
-    .tarea span {font-size: 1.5em;}
+    .tarea span, .tareachecked span {font-size: 1.5em;}
     input[name="entrada_tarea"] {width: 100%;}
 }
 
 @media screen and (width < 650px) {
-    .tarea span {font-size: 1em;}
-    .tarea i {
+    .tarea span, .tareachecked span {font-size: 1em;}
+    .tarea i, .tareachecked i {
         font-size: 1.4em;
         padding: 0px 12.5px;
         padding-bottom: 7.5px;
