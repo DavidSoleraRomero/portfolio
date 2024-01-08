@@ -71,8 +71,8 @@ input[name="entrada_tarea"] {
     border-radius: 7.5px;
     background-color: rgba(145, 97, 8, 0.1);
     width: 70%;
-    padding-top: 10px;
-    padding-bottom: 5px;
+    padding-top: 7.25px;
+    padding-bottom: 7.25px;
     border: 0.25px solid rgb(110, 74, 5);
     margin: 7.5px 0px;
     justify-content: center;
@@ -85,8 +85,8 @@ input[name="entrada_tarea"] {
     border-radius: 7.5px;
     background-color: rgba(86, 168, 19, 0.1);
     width: 70%;
-    padding-top: 6px;
-    padding-bottom: 6px;
+    padding-top: 7.25px;
+    padding-bottom: 7.25px;
     border: 0.25px solid rgb(64, 110, 4);
     margin: 7.5px 0px;
     justify-content: center;
