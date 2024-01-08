@@ -175,7 +175,7 @@ document.addEventListener("DOMContentLoaded", function() {
     boton.addEventListener("click", function() {
         var tareasGuardadas = JSON.parse(localStorage.getItem('tareas')) || {};
         var idsTareas = Object.keys(tareasGuardadas);
-        if (validaTarea() === true && idsTareas.length < 8) {
+        if (validaTarea() === true && idsTareas.length < 9) {
             creaTarea();
         } else if (validaTarea() === true) {
             alert("Complete alguna tarea, por favor");
