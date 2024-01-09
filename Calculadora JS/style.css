@@ -1,0 +1,49 @@
+/* CSS para Calculadora JS de David Solera Romero */
+
+* {box-sizing: border-box;}
+
+body {
+    background-color: black;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#calculadora {
+    background-color: white;
+    width: 30%;
+    border-radius: 7.5px;
+}
+
+#pantallacalc p {
+    text-align: right;
+    margin: 10px 11.5px;
+    margin-bottom: 0;
+    padding: 25px 6px;
+    border: 1px solid black;
+}
+
+#zonanumerica .grid4 {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    padding: 10px 10px;
+}
+
+#zonanumerica .grid4 button {
+    text-align: center;
+    margin: 1.7px;
+    padding: 30px 0px;
+    border-radius: 2.75px;
+    border: 0.25px solid black;
+}
+
+@media screen and (width < 1200px) {
+    #calculadora {width: 65%;}
+}
+
+@media screen and (width < 675px) {
+    #calculadora {width: 86%;}
+}
