@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios y Tablas</title>
+</head>
+<body>
+    <!-- Formulario -->
+    <h1>Formularios</h1>
+    <form action="" method="post"> <!-- Envoltorio formulario - action indica hacia dónde se envían los datos - method el método con el que se envía (post / get) -->
+
+        <label for="username">Usuario</label><br> <!-- Etiqueta descriptiva -->
+        <input type="text" name="username" placeholder="Nombre de usuario" autocomplete="username" required><br> <!-- Campo de entrada (text) con:
+                                                                                                                    placeholder: previsualiza la palabra
+                                                                                                                    autocomplete: navegador reconoce campo de username
+                                                                                                                    required: obligatorio (método HTML)
+                                                                                                                    name: identifica la entrada al enviar formulario-->
+        
+        <!-- Pattern / Patrón -->
+        <br><label for="patron">Campo con patrón</label>
+        <br><input type="text" id="patron" name="codigo" pattern="[A-Za-z0-9]{3}"><br> <!-- pattern: Indica el patrón de entrada -->
+
+        <!-- Disabled -->
+        <br><label for="deshabilitado">Campo deshabilitado</label><br>
+        <input type="text" id="deshabilitado" disabled><br> <!-- disabled: deshabilita el campo de entrada -->
+
+        <!-- Agrupación -->
+        <br><fieldset> <!-- Permite agrupar elementos -->
+            <legend>Género</legend> <!-- Pone nombre a los elementos agrupados -->
+            <input type="radio" id="male" name="gender" value="hombre"> <!-- Campo de entrada (radio) con -->
+            <label for="male">Masculino</label>
+            <br><input type="radio" id="female" name="gender" value="mujer">
+            <label for="female">Femenino</label>
+            <br><input type="radio" id="other" name="gender" value="otro">
+            <label for="other">Otro</label>
+        </fieldset><br>
+
+        <!-- Multilínea-->
+        <label for="comentario">Comentarios</label><br>
+        <textarea name="comentario" rows="4" cols="50" placeholder="Escribe aquí..."></textarea><br> <!-- Texto multilínea -->
+
+        <!-- Checkbox -->
+        <input type="checkbox" id="subscribe" name="suscrito" value="yes"> 
+        <label for="subscribe">Suscribirse</label><br>
+
+        <!-- Menú desplegable -->
+        <br><select name="ciudad"> <!-- Agrupa la lista desplegable -->
+            <option value="choose">Elija una ciudad</option>
+            <option value="nueva-york">Nueva York</option> <!-- Opciones de la lista -->
+            <option value="paris">París</option>
+        </select><br>
+        
+        <!-- Botón submit -->
+        <br><input type="submit" value="Enviar"> <!-- Botón submit para enviar el formulario -->
+    </form>
+
+    <h1>Tablas</h1>
+    <!-- Tabla -->
+    <table style="border:1px solid black;"> <!-- Agrupa la tabla -->
+
+        <caption>Tabla de prueba</caption>
+
+        <colgroup> <!-- Agrupa las columnas para estilado -->
+            <col style="background-color: orange;"> <!-- Aplica estilado a las columnas en orden de escritura-->
+        </colgroup>
+
+        <thead> <!-- Define la sección cabecera de la tabla -->
+            <tr> <!-- Fila de la tabla -->
+                <th>Encabezado 1</th> <!-- Celdas de encabezado -->
+                <th>Encabezado 2</th>
+                <!-- <th rowspan="2">Encabezado 2</th> - Con rowspan ocupa 2 filas -->
+                <!-- <th colspan="2">Encabezado 2</th> - Con colspan ocupa 2 columnas -->
+            </tr>
+        </thead>
+
+        <tbody> <!-- Define la sección del cuerpo de la tabla -->
+            <tr>
+                <td>Dato 1</td> <!-- Celdas de datos normales -->
+                <td>Dato 2</td>
+            </tr>
+        </tbody>
+
+        <tfoot> <!-- Define la sección del footer de la tabla-->
+            <tr>
+                <td>Footer 1</td>
+                <td>Footer 2</td>
+            </tr>
+        </tfoot>
+        
+    </table>
+</body>
+</html>

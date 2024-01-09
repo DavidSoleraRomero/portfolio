@@ -1,0 +1,27 @@
+/* Estilo Horario 1º DAM Mañana */
+
+* {box-sizing: border-box;}
+
+html, body {height: 100vh;}
+
+body {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+table {text-align: center; border: 1px solid black;}
+/* Para eliminar los bordes duplicados podríamos utilizar --> border-collapse: collapse; */
+/* Para bajar el caption a la parte baja --> caption-side: bottom; */
+
+table td, table th {
+    padding: 7px 5.5px; 
+    background-color: rgb(237, 237, 237);
+    border: 1px solid black;
+}
+
+/* 
+De esta forma --> 
+table tr:nth-child(even) {background-color: red;}
+table tr:nth-child(odd) {background-color: rgb(56, 4, 4);}
+Podemos seleccionar las lineas pares (even) y las impares (odd) de las tablas */
