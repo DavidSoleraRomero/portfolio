@@ -1,0 +1,185 @@
+/* CSS del Proyecto Crud de David Solera Romero */
+body {
+  background: linear-gradient(50deg, rgb(129, 129, 129),  #0c0c0c);
+  height: 100vh;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
+form {
+  background: rgba(255, 255, 255, 0.18);
+  padding: 5.7em;
+  height: 350px;
+  border-radius: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(9px);
+  box-shadow: 2.5px 2.5px 100px rgba(0, 0, 0, 0.65);
+  text-align: center;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+}
+form p {
+  font-weight: 500;
+  color: #fff;
+  opacity: 0.7;
+  font-size: 1.4rem;
+  margin-top: 0;
+  margin-bottom: 37.5px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+form a {
+  text-decoration: none;
+  color: #ddd;
+  font-size: 12px;
+}
+form a:hover {
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2509803922);
+}
+form a:active {
+  text-shadow: none;
+}
+form input {
+  background: transparent;
+  width: 200px;
+  padding: 1em;
+  margin-bottom: 2em;
+  border: none;
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 5000px;
+  backdrop-filter: blur(5px);
+  box-shadow: 4px 4px 60px rgba(0, 0, 0, 0.2);
+  color: #ffffff;
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  transition: all 0.4s ease-in-out;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  
+}
+form input:hover {
+  background: rgba(172, 172, 172, 0.25);
+  border: 1px solid white;
+  box-shadow: 0px 0px 62.5px rgba(0, 0, 0, 0.775);
+}
+form input[type=email]:focus, form input[type=password]:focus {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.3);
+}
+form input[type=button] {
+  margin-top: 32.5px;
+  width: 150px;
+  font-size: 1rem;
+}
+form input[type=button]:hover {
+  cursor: pointer;
+}
+form input[type=button]:active {
+  background: rgba(255, 255, 255, 0.2);
+}
+form:hover {
+  margin: 4px;
+}
+
+::placeholder {
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.drop {
+  background: rgba(105, 105, 105, 0.35);
+  backdrop-filter: blur(4px);
+  border-radius: 12.5px;
+  border: 0.5px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 10px 10px 60px -8px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  transition: all 0.5s ease;
+}
+.drop-1 {
+  height: 80px;
+  width: 80px;
+  top: -20px;
+  left: -40px;
+  z-index: -1;
+}
+.drop-2 {
+  height: 75px;
+  width: 75px;
+  bottom: -30px;
+  right: -20px;
+}
+.drop-3 {
+  height: 100px;
+  width: 100px;
+  bottom: 120px;
+  right: -50px;
+  z-index: -1;
+}
+.drop-4 {
+  height: 105.5px;
+  width: 105.5px;
+  top: -45px;
+  right: -45px;
+}
+.drop-5 {
+  height: 60px;
+  width: 60px;
+  bottom: 200px;
+  left: -35px;
+}
+.drop-6 {
+  height: 97.5px;
+  width: 100px;
+  bottom: -35px;
+  left: -35px;
+  z-index: -1;
+}
+.drop-7 {
+  height: 50px;
+  width: 50px;
+  bottom: -25px;
+  left: 150px;
+  z-index: -1;
+}
+.drop-8 {
+  height: 90px;
+  width: 90px;
+  top: -50px;
+  left: 150px;
+  z-index: -1;
+}
+
+a,
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+@media screen and (width < 605px) { 
+  form input[type=button] {margin-top: 20px;}
+  .drop-4 {display: none;}
+  form {padding: 3em;}
+}
+
+@media screen and (width < 465px) {
+  .drop-3 {display: none;}
+  form {padding: 2.5em;}
+}
+
+@media screen and (width < 415px) {
+    .drop-3, .drop-2 {display: none;}
+    form {padding: 1.625em;}
+    .drop-1, .drop-5, .drop-6 {display: none;}
+    .drop-7 {width: 75px; height: 75px; bottom: -50px; left: 45px}
+}
+
+/*# sourceMappingURL=estilo.css.map */
