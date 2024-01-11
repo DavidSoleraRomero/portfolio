@@ -93,7 +93,7 @@ table tr:nth-child(even) {background: rgba(197, 197, 197, 0.25);}
 
     table tbody .fa {font-size: 1.5em;}
 
-    table {margin: 1em 0em;}
+    table {margin: 1em 0em; backdrop-filter: blur(2px);}
 
     table caption {font-size: 1.65em;}
     
