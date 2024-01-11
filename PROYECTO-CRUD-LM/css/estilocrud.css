@@ -22,8 +22,10 @@ body {
 .container {position: absolute; width: 90%;}
 
 table tbody .fa {cursor: pointer; font-size: 2em;}
-table tbody .fa-trash:hover {color: rgb(238, 78, 78); transition: 0.5s ease-in;}
-table tbody .fa-pencil-square:hover {color: rgb(236, 183, 83); transition: 0.5s ease-in;}
+table tbody .fa-window-close:hover {color: rgb(238, 78, 78); transition: 0.5s ease-in;}
+table tbody .fa-refresh:hover {color: rgb(236, 183, 83); transition: 0.5s ease-in;}
+table tbody .fa-plus-circle:hover {color: rgb(164, 231, 76); transition: 0.5s ease-in;}
+table tbody .fa-plus-circle {font-size: 2.1em;}
 
 table {
     margin-top: 25px;
@@ -33,7 +35,7 @@ table {
     height: 350px;
     border-radius: 35px;
     border: 2px solid rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(5.75px);
     box-shadow: 2.5px 2.5px 100px rgba(0, 0, 0, 0.65);
     text-align: center;
     position: relative;
@@ -53,7 +55,7 @@ table td {
     text-align: center;}
 
 table th {
-    font-size: .925em;
+    font-size: 1.1em;
     font-family: texto1;
     border-bottom: 7.5px solid #dbdbdb;
     color: #dfdfdf;
@@ -65,7 +67,7 @@ table tr:nth-child(even) {background: rgba(197, 197, 197, 0.25);}
 /* Estilado de mini glasses ubicados alrededor del CRUD */
 .drop {
     background: rgba(105, 105, 105, 0.5);
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(3.75px);
     border-radius: 12.5px;
     border: 0.5px solid rgba(255, 255, 255, 0.175);
     box-shadow: 10px 10px 60px -8px rgba(0, 0, 0, 0.4);
@@ -74,17 +76,80 @@ table tr:nth-child(even) {background: rgba(197, 197, 197, 0.25);}
 .drop-1 {
     height: 80px;
     width: 80px;
-    top: 150px;
-    left: -50px;
-    z-index: -1;}
+    top: 37.5%;
+    left: -67.5px;}
 .drop-2 {
+    height: 77.5px;
+    width: 75px;
+    bottom: -47.5px;
+    right: -10px;}
+.drop-3 {
     height: 75px;
     width: 75px;
+    top: 89px;
+    right: -35px;}
+.drop-4 {
+    height: 75px;
+    width: 75px;
+    top: 60px;
+    left: 32.5%;
+    z-index: -1;}
+.drop-5 {
+    height: 75px;
+    width: 75px;
+    bottom: -12.5%;
+    left: 25%;
+    z-index: -1;}
+.drop-6 {
+    height: 105px;
+    width: 105px;
+    bottom: 10%;
+    left: 70%;
+    z-index: -1;}
+.drop-7 {
+    height: 55px;
+    width: 55px;
+    top: 17.5%;
+    right: 17.5%;
+    z-index: -1;}
+.drop-8 {
+    height: 65px;
+    width: 65px;
+    top: 35%;
+    left: 13.5%;
+    z-index: -1;}
+.drop-9 {
+    height: 65px;
+    width: 65px;
     bottom: -30px;
-    right: -20px;}
+    left: -25px;}
+.drop-10 {
+    height: 132.5px;
+    width: 132.5px;
+    bottom: 30%;
+    left: 47.5%;
+    z-index: -1;}
+    
+@media screen and (max-width: 1385px) {
+    .drop-1 {left: -32.5px; z-index: -1;}
+}
+
+@media screen and (max-width: 925px) { 
+    .drop-3 {top: 34%; right: -20px; z-index: -1;}
+}
 
 
 @media screen and (max-width: 775px) {
+    .drop-9 {bottom: -30px; left: 10px;}
+
+    .drop-2 {right: 50px; bottom: -45px;}
+
+    .drop-3, .drop-5 {display: none;}
+
+    .drop-6 {left:22.5%; bottom: 12.5%;}
+
+    .drop-8 {left: 28%;}
+
     .container{width: 96%;}
 
     html {height: 110%;}
