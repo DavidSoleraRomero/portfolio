@@ -83,15 +83,15 @@ form input[type=email]:focus, form input[type=password]:focus {
   background: rgba(255, 255, 255, 0.1);
   box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.3);
 }
-form input[type=button] {
+form input[type=submit] {
   margin-top: 32.5px;
   width: 150px;
   font-size: 1.075rem;
 }
-form input[type=button]:hover {
+form input[type=submit]:hover {
   cursor: pointer;
 }
-form input[type=button]:active {
+form input[type=submit]:active {
   background: rgba(255, 255, 255, 0.2);
 }
 form:hover {
@@ -173,13 +173,13 @@ a,
 input:focus,
 select:focus,
 textarea:focus,
-button:focus {
+submit:focus {
   outline: none;
 }
 
 /* Media Queries */
 @media screen and (width < 605px) { 
-  form input[type=button] {margin-top: 20px;}
+  form input[type=submit] {margin-top: 20px;}
   .drop-4 {display: none;}
   form {padding: 3em;}
 }
