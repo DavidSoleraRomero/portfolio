@@ -1,0 +1,132 @@
+/* CSS del Proyecto Crud de David Solera Romero */
+
+/* Fuente utilizada en la página */
+@font-face {
+    font-family: texto1;
+    src: url("../fonts/hadijah-free-trial.ttf");
+}
+
+/* Estilado general */
+* {box-sizing: border-box;}
+
+html {height: 100%;}
+
+body {
+    margin: 0;
+    padding: 0 5%;
+    background: linear-gradient(45deg, rgb(129, 129, 129),  #0c0c0c);
+    font-family: "Montserrat";
+    color: #fff;}
+
+/* Contenedor del formulario */
+.container {position: absolute; width: 90%;}
+
+table tbody .fa {cursor: pointer; font-size: 2em;}
+table tbody .fa-trash:hover {color: rgb(238, 78, 78); transition: 0.5s ease-in;}
+table tbody .fa-pencil-square:hover {color: rgb(236, 183, 83); transition: 0.5s ease-in;}
+
+table {
+    margin-top: 25px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1em;
+    height: 350px;
+    border-radius: 35px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
+    box-shadow: 2.5px 2.5px 100px rgba(0, 0, 0, 0.65);
+    text-align: center;
+    position: relative;
+    transition: all 0.2s ease-in-out;}
+
+table tbody {margin-bottom: 10%;}
+
+table caption {
+    font-size: 2em;
+    margin: .5em 0 .75em;
+    font-family: texto1;}
+
+table th,
+table td {
+    padding: .625em;
+    font-size: 1em;
+    text-align: center;}
+
+table th {
+    font-size: .925em;
+    font-family: texto1;
+    border-bottom: 7.5px solid #dbdbdb;
+    color: #dfdfdf;
+    letter-spacing: .1em;
+    text-transform: uppercase;}
+
+table tr:nth-child(even) {background: rgba(197, 197, 197, 0.25);}
+
+/* Estilado de mini glasses ubicados alrededor del CRUD */
+.drop {
+    background: rgba(105, 105, 105, 0.5);
+    backdrop-filter: blur(4px);
+    border-radius: 12.5px;
+    border: 0.5px solid rgba(255, 255, 255, 0.175);
+    box-shadow: 10px 10px 60px -8px rgba(0, 0, 0, 0.4);
+    position: absolute;
+    transition: all 0.5s ease;}
+.drop-1 {
+    height: 80px;
+    width: 80px;
+    top: 150px;
+    left: -50px;
+    z-index: -1;}
+.drop-2 {
+    height: 75px;
+    width: 75px;
+    bottom: -30px;
+    right: -20px;}
+
+
+@media screen and (max-width: 775px) {
+    .container{width: 96%;}
+
+    html {height: 110%;}
+
+    body {padding: 0 2%;}
+
+    table tbody .fa {font-size: 1.5em;}
+
+    table {margin: 1em 0em;}
+
+    table caption {font-size: 1.65em;}
+    
+    table thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;}
+    
+    table tr {
+        border-bottom: 3px solid #ddd;
+        display: block;
+        margin-bottom: .625em;}
+    
+    table td {
+        border-bottom: 1px solid #ddd;
+        display: block;
+        font-size: .8em;
+        text-align: right;}
+    
+    table td::before {
+        /*
+        * aria-label has no advantage, it won't be read inside a table
+        content: attr(aria-label);
+        */
+        content: attr(data-label);
+        margin-right: 5.5px;
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;}
+    
+    table td:last-child {border-bottom: 0;}}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/estilocrud.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Interfaz CRUD</title>
+</head>
+<body>
+<div class="container">
+    <table>
+        <caption>Manipulación</caption>
+        <thead>
+            <tr>
+                <th scope="col">Account</th>
+                <th scope="col">Due Date</th>
+                <th scope="col">Amount</th>
+                <th scope="col">Period</th>
+                <th scope="col">Manipular</th>
+            </tr>
+        </thead>
+        <tbody id="cuerpo">
+            <tr>
+                <td data-label="Account">Visa - 3412</td>
+                <td data-label="Due Date">04/01/2016</td>
+                <td data-label="Amount">$1,190</td>
+                <td data-label="Period">03/01/2016 - 03/31/2016</td>
+                <td data-label="Edición">
+                    <i class="fa fa-pencil-square" aria-hidden="true"></i>
+                    <i class="fa fa-trash" aria-hidden="true"></i>
+                </td>
+            </tr>
+            <tr>
+                <td scope="row" data-label="Account">Visa - 6076</td>
+                <td data-label="Due Date">03/01/2016</td>
+                <td data-label="Amount">$2,443</td>
+                <td data-label="Period">02/01/2016 - 02/29/2016</td>
+                <td data-label="Edición">
+                    <i class="fa fa-pencil-square" aria-hidden="true"></i>
+                    <i class="fa fa-trash" aria-hidden="true"></i>
+                </td>
+            </tr>
+            <tr>
+                <td scope="row" data-label="Account">Corporate AMEX</td>
+                <td data-label="Due Date">03/01/2016</td>
+                <td data-label="Amount">$1,181</td>
+                <td data-label="Period">02/01/2016 - 02/29/2016</td>
+                <td data-label="Edición">
+                    <i class="fa fa-pencil-square" aria-hidden="true"></i>
+                    <i class="fa fa-trash" aria-hidden="true"></i>
+                </td>
+            </tr>
+            <tr>
+                <td scope="row" data-label="Acount">Visa - 3412</td>
+                <td data-label="Due Date">02/01/2016</td>
+                <td data-label="Amount">$842</td>
+                <td data-label="Period">01/01/2016 - 01/31/2016</td>
+                <td data-label="Edición">
+                    <i class="fa fa-pencil-square" aria-hidden="true"></i>
+                    <i class="fa fa-trash" aria-hidden="true"></i>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="drops">
+        <div class="drop drop-1"></div>
+        <div class="drop drop-2"></div>
+        <div class="drop drop-3"></div>
+        <div class="drop drop-4"></div>
+        <div class="drop drop-5"></div>
+        <div class="drop drop-6"></div>
+        <div class="drop drop-7"></div>
+        <div class="drop drop-8"></div>
+    </div>
+</div>
+</body>
+</html>
