@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/insercion.css">
+    <title>Formulario de inserción</title>
+</head>
+<body>
+
+    <form action="" method="post">
+
+        <h1>Formulario de inserción</h1>
+
+        <!-- Campo de formulario de texto -->
+        <label for="nombreusuario">Nombre: </label>
+        <input type="text" name="nombreusuario" id="nombreusuario" required placeholder="Nombre"> <!-- ID Front END - Name Back END -->
+
+        <label for="apellidos">Apellidos: </label>
+        <input type="text" name="apellidos" id="apellidos" required placeholder="Apellidos">
+
+        <label for="hermanos">Hermanos: </label>
+        <input type="number" name="hermanos" id="hermanos" min="1" max="10" disabled placeholder="Usted incluido">
+
+        <fieldset> <!-- Permite agrupar elementos -->
+            <legend>Género</legend> <!-- Pone nombre a los elementos agrupados -->
+            <input type="radio" id="male" name="gender" value="hombre"> <!-- Campo de entrada (radio) con -->
+            <label for="male" class="generos">Masculino</label>
+            <input type="radio" id="female" name="gender" value="mujer">
+            <label for="female" class="generos">Femenino</label>
+            <input type="radio" id="other" name="gender" value="otro">
+            <label for="other" class="generos">Otro</label>
+        </fieldset>
+
+        <input type="checkbox" name="terminos" id="terminos" required>
+        <label for="terminos" id="terminosl">Términos y condiciones</label><br>
+
+        <input type="submit" value="Enviar"> <!-- Submit necesario para Back END -->
+        
+    </form>
+
+</body>
+</html>
