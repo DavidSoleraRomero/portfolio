@@ -25,16 +25,20 @@ form {
 
 form h1 {text-align: center;}
 
-label:not(#terminosl):not(.generos), input:not([type=checkbox]):not([type=submit]):not([type=radio]) {
+label:not(#terminosl):not(.generos):not(#ciclol), input:not([type=checkbox]):not([type=submit]):not([type=radio]) {
     display: block; 
     margin-top: 7.5px;
 }
+
+select {margin-top: 12.5px;}
 
 fieldset {margin-top: 9.5px; margin-bottom: 6.5px;}
 
 input[type=checkbox] {margin-top: 12.5px;}
 
-input:not([type=submit]):not([type=checkbox]):not([type=radio]) {width: 100%;}
+input:not([type=submit]):not([type=checkbox]):not([type=radio]), textarea {width: 100%;}
+
+textarea {height: 65px; resize: none;}
 
 input[type=submit] {
     margin-top: 15px; 
