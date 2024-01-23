@@ -1,0 +1,25 @@
+/* Estilo paralelo a Bootstrap para personalización
+/* David Solera Romero */
+
+/* Color morado */ 
+.bg-purple {background-color: purple;}
+.bg-purpleclaro {background-color: rgba(255, 0, 255, 0.2);}
+.text-purple {color: purple;}
+.border-purple {border-color: purple!important;}
+
+/* Altura */
+.vh-85 {height: 85vh;}
+
+/* Espaciado */
+.p6 {padding: 6;}
+
+/* Familias de fuentes */
+@font-face {
+    font-family: texto;
+    src: url("./font/mifuente.ttf");
+}
+
+.font-texto {font-family: texto;}
+
+/* Imagen de fondo */
+.bg-img-patron {background-image: url('../img/patron.jpg');}
