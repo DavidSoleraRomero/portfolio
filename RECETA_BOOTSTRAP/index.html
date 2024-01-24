@@ -11,18 +11,18 @@
     <!-- Enlazado de Favicon -->
     <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
 </head>
-<body class="bg-imgb">
+<body class="bg-imgb text-green">
 
     <!-- Contenedor del contenido de la web -->
     <div id="wrapper" class="container bg-pistacho p-225">
         <!-- H1 de la web -->
-        <h1 class="pt-2 fw-bold border-dark border-2 border-start border-end border-bottom text-center m-auto rounded-3 shadow-custom bg-verdeclaro mb-4 w-30 w-52">LENTEJAS</h1>
+        <h1 class="pt-2 pb-1 fw-bold border-dark border-2 border-start border-end border-bottom text-center m-auto rounded-3 shadow-custom bg-verdeclaro mb-5 w-30 w-52">LENTEJAS</h1>
 
         <!-- Cita de la web - Uso de blockquote -->
-        <blockquote class="fst-italic text-center w-70 m-auto border-start border-end border-dark py-5 fs-5 border-4 bg-verdeclaro mb-4">Estas son lentejas. Si quieres las comes, y si no, las dejas.</blockquote>
+        <blockquote class="fst-italic text-center w-70 m-auto border-start border-end border-dark py-5 fs-5 border-4 bg-verdeclaro mb-4 text-shadow">Estas son lentejas. Si quieres las comes, y si no, las dejas.</blockquote>
 
         <!-- Video de lentejas -->
-        <div class="ratio ratio-16x9 container px-10">
+        <div class="ratio ratio-16x9 mw-950 m-auto px-10">
             <iframe src="https://www.youtube.com/embed/ptgklk9GYw0?si=jfnPoeWCur3FNzV_" title="YouTube video" allowfullscreen></iframe>
         </div>
         
@@ -30,7 +30,7 @@
             <h2 class="fw-bold border-dark border-2 border-start border-end border-bottom text-center m-auto rounded-3 shadow-custom bg-verdeclaro mb-5 fs-4 py-2 mt-4 w-40 w-30">Ingredientes</h2>
             <div class="row pt-5">
                 <div class="col-12 col-sm-9 col-xl-6">
-                    <ul class="custom ps-35 fs-5">
+                    <ul class="custom ps-425 fs-5">
                         <li>500g. de lentejas pardinas extra</li>
                         <li>4 zanahorias grandes</li>
                         <li>2 dientes de ajo</li>
@@ -48,7 +48,7 @@
                         <li>Agua</li>
                     </ul>
                 </div>
-                <div class="ms-10 bg-imgl col d-none d-xl-block"><img src="./img/lentejas.png" alt="LENTEJAS"></div>
+                <div class="ms-10 bg-imgl col d-none d-xl-flex align-items-center"><img src="./img/lentejas.png" alt="LENTEJAS" class="custom-img w-auto"></div>
             </div>
         </div>
 
@@ -68,20 +68,33 @@
             </ol>
         </div>
 
-        <div id="infonutricional">
-            <h2 class="fw-bold border-dark border-2 border-start border-end border-bottom text-center m-auto rounded-3 shadow-custom bg-verdeclaro my-5 fs-4 py-2 w-40 w-30">Información nutricional</h2>
-            <dl class="fs-5 ms-10">
-                <dt>Calorías</dt>
-                <dd class="ms-3 ms-lg-5">- Contiene <b>116 calorías</b> cada 100 gramos.</dd>
-                <dt>Grasa</dt>
-                <dd class="ms-3 ms-lg-5">- Contiene <b>0.4 gramos de grasa</b> cada 100 gramos.</dd>
-                <dt>Hidratos de carbono</dt>
-                <dd class="ms-3 ms-lg-5">- Contiene <b>20 gramos de hidratos de carbono</b> cada 100 gramos.</dd>
-                <dt>Fibra</dt>
-                <dd class="ms-3 ms-lg-5">- Contiene <b>8 gramos de fibra</b> cada 100 gramos.</dd>
-                <dt>Proteína</dt>
-                <dd class="ms-3 ms-lg-5">- Contiene <b>9 gramos de proteína</b> cada 100 gramos.</dd>
-            </dl>
+        <div id="infonutricional mx-5">
+            <h2 class="fw-bold border-dark border-2 border-start border-end border-bottom text-center m-auto rounded-3 shadow-custom bg-verdeclaro my-5 fs-5 py-2 w-40 w-30">Información nutricional</h2>
+                <table class="table table-striped table-dark">
+                    <tbody>
+                        <tr>
+                            <td>Calorías</td>
+                            <td>116 kcal / 100g</td>
+                        </tr>
+                        <tr>
+                            <td>Grasa</td>
+                            <td>0.4g / 100g</td>
+                        </tr>
+                        <tr>
+                            <td>Hidratos carbono</td>
+                            <td>20g / 100g</td>
+                        </tr>
+                        <tr>
+                            <td>Fibra</td>
+                            <td>8g / 100g</td>
+                        </tr>
+                        <tr>
+                            <td>Proteína</td>
+                            <td>9g / 100g</td>
+                        </tr>
+                    </tbody>
+                </table>
+
         </div>
 
     </div>

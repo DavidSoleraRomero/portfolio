@@ -1,89 +1,56 @@
 /* Estilo alternativo a Bootstrap para la página de mi receta favorita */
-/*       Hecho por David Solera Romero, estudiante de 1º de DAM        */
-
+/* Hecho por David Solera Romero, estudiante de 1º de DAM              */
 /* Fuentes */
-@font-face {
-    font-family: textonormal;
-    src: url(../fonts/GlacialIndifference-Regular.otf);
-}
+@font-face {font-family: textonormal; src: url(../fonts/GlacialIndifference-Regular.otf);}
+@font-face {font-family: titulos; src: url(../fonts/Lusiana.OTF.otf);}
 
-@font-face {
-    font-family: titulos;
-    src: url(../fonts/Lusiana.OTF.otf);
-}
-
-/* Border box */
-* {box-sizing: border-box;}
-
-/* Textos con fuentes específicas */
-body {font-family: textonormal; color: rgb(19, 39, 0);}
+/* Textos con fuentes específicas y colores de textos */
+body {font-family: textonormal;}
 h1, h2 {font-family: titulos !important;}
+text-green {color: rgb(19, 39, 0);}
 
-/* Box-shadow personalizado para h1 */
+/* Sombras de text y box personalizadas */
 .shadow-custom {box-shadow: 5px 5px 5px black;}
+.text-shadow {text-shadow: 4px 4px 17px black;}
 
-/* Imagen de fondo para el body */
+/* Imagenes de fondo personalizadas */
 .bg-imgb {background-image: url("../img/fondolegumbres.jpg")}
-
-/* Imagen de fondo de lentejas */
 .bg-imgl img {max-width: 100%; height: 425px;}
 
 /* Personalización ancho de .container del wrapper */
-@media (min-width: 1400px) {
-    #wrapper {
-        width: 82.5%;
-        max-width: 100%;
-    }
-}
+@media (min-width: 1400px) {#wrapper {width: 82.5%; max-width: 100%;}}
 
 /* Personalización del ancho del .container de Preparación */
 .container-prep {width: 87%;}
-@media (min-width: 1400px) { 
-    .container-prep {width: 81%;}
-}
-
-/* Estilo específico de blockquote */
-blockquote {text-shadow: 4px 4px 17px black;}
+@media (min-width: 1400px) {.container-prep {width: 81%;}} /* Solo para ordenador */
 
 /* Width personalizados */
+.mw-950 {max-width: 950px;}
+.mw-500 {max-width: 500px;}
 .w-70 {width: 70%;}
 .w-52 {width: 52.5%;}
 .w-40 {width: 40%;}
-@media (min-width: 1400px) { 
-    .w-30 {width: 30%;}
-}
+@media (min-width: 1400px) { .w-30 {width: 30%;}} /* Solo para ordenador */
 
 /* Cambio de las viñetas de las listas desordenadas */
 ul {list-style-image: url("../img/bulletlist.png");}
 
 /* Margin personalizado */
-.ms-40 {margin-left: 40%;}
-.ms-35 {margin-left: 35%;}
-.ms-30 {margin-left: 30%;}
-.ms-20 {margin-left: 20%;}
-.ms-15 {margin-left: 15%;}
 .ms-10 {margin-left: 10%;}
 
 /* Padding personalizado */
-.ps-40 {padding-left: 40%;}
-.ps-35 {padding-left: 35%;}
-.ps-30 {padding-left: 30%;}
-.ps-20 {padding-left: 20%;}
-.ps-10 {padding-left: 10%;}
+.p-225 {padding: 2.25%;}
+.ps-425 {padding-left: 42.5%;}
 .px-10 {padding-left: 10%; padding-right: 10%;}
 
-/* Colores de fondo */
+/* Height personalizado para imagen */
+.custom-img {max-height: 275px;}
+
+/* Colores de fondo y de bordes */
 .bg-pistacho {background-color: #A7EC9A;}
 .bg-verdeclaro {background-color: rgb(151, 255, 137)}
-
-/* Color de borde */
 .border-nearlygrey {border-color: rgb(0,0,0,0.4) !important;}
 
-/* Padding personalizado del wrapper */
-.p-225 {padding: 2.25%;}
-
 /* Media Queries específica de los ingredientes */
-@media (max-width: 600px) { 
-    #ingredientes .ps-35 {padding-left: 15%;}
-}
-
+@media (max-width: 900px) { #ingredientes .ps-425 {padding-left: 15%;}}
+@media (max-width: 400px) {#wrapper {margin-left: 2.75px;}}
