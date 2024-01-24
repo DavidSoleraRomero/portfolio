@@ -39,7 +39,7 @@ ul {list-style-image: url("../img/bulletlist.png");}
 .ms-10 {margin-left: 10%;}
 
 /* Padding personalizado */
-.p-225 {padding: 2.25%;}
+.p-4-5 {padding: 4.5%;}
 .ps-425 {padding-left: 42.5%;}
 .px-10 {padding-left: 10%; padding-right: 10%;}
 
@@ -50,6 +50,7 @@ ul {list-style-image: url("../img/bulletlist.png");}
 .bg-pistacho {background-color: #A7EC9A;}
 .bg-verdeclaro {background-color: rgb(151, 255, 137)}
 .border-nearlygrey {border-color: rgb(0,0,0,0.4) !important;}
+.border-verdeclaro {border-color: #39c327 !important;}
 
 /* Media Queries específica de los ingredientes */
 @media (max-width: 900px) { #ingredientes .ps-425 {padding-left: 15%;}}
