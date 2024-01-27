@@ -124,6 +124,8 @@
 /* Alturas position absolute */
 .top-12 {top:12%;}
 .bottom-20 {bottom:20%;}
+/* Color texto al hacer hover */
+.hover:hover {color: #03b364 !important; transition: 1s;}
 /* Height */
 .vh-94-1 {height: 94.1vh;}
 /* Colores */
