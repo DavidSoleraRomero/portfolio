@@ -1,0 +1,37 @@
+/*  Proyecto web desarrollado en Bootstrap
+    Por David Solera Romero, 1º DAM
+    Para la asignatura Lenguaje de Marcas
+    A día 24 / 01 / 2024 */
+
+/* Fuentes */
+@font-face {
+    font-family: titulo;
+    src: url("../fonts/Pixelscapes.ttf");
+}
+
+@font-face {
+    font-family: texto;
+    src: url("../fonts/Nihonium113.ttf");
+}
+
+.titulo {font-family: titulo;}
+.texto {font-family: texto; font-size: 2rem;}
+
+/* Estilo general */
+* { box-sizing: border-box; font-family: titulo;}
+
+
+/* Estilo de la hero section */
+#hero {
+    background-image: url("../img/hero3.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;}
+
+/* Zona personalizada */
+/* Height */
+.vh-94-1 {height: 94.1vh;}
+/* Colores */
+.text-lightgreen {color: rgb(203, 255, 211) !important}
+.bg-green {background: rgb(31,99,60); background: linear-gradient(90deg, rgba(31,99,60,1) 0%, rgba(1,80,34,1) 100%);}
+.border-lightgreen {border-color: rgb(203, 255, 211) !important;}
