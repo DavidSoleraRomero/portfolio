@@ -35,3 +35,16 @@ let variableHoisting2; // A diferencia de con "var", con "let" el intérprete su
     
     - undefined: La variable está declarada pero no se le ha asignado un valor
     - null: Se usa para indicar que la variable no tiene / deja de tener un valor */
+
+/* TIPADO DINÁMICO */
+
+/*  Las variables pueden cambiar de tipo; 
+    se determina en tiempo de ejecución
+    
+    Se pueden hacer castings de esta forma:
+    Number(variable)
+    Boolean(variable)
+    String(variable)
+    variable = null
+    variable = undefined
+*/
