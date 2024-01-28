@@ -20,6 +20,8 @@
 /* Estilo general */
 * {box-sizing: border-box; font-family: titulo;}
 
+body {background-image: url("../img/patron.png");}
+
 /* Estilo de la hero section */
 #hero {
     background-image: url("../img/hero3.jpg");
@@ -28,39 +30,24 @@
     background-position: 50%;}
 
 /* Estilo del botón de la hero section - personalizado */
-.containeruan {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    width: 200px;}
+.containeruan {width: 200px;}
 .containeruan .btn {
     height: 57px;
     margin: 20px;
     margin-bottom: 40px;
-    position: relative;
     width: 215px;}
 .containeruan .btn a {
-    align-items: center;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 17.5px;
     box-shadow: 0 15px 35px rgba(255, 255, 255, 0.2);
-    color: #fff;
-    display: flex;
     font-size: 18px;
     font-weight: 700;
     left: 0;
     top: 0;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    justify-content: center;
     letter-spacing: 1px;
-    text-decoration: none;
-    overflow: hidden;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(15px);
-    z-index: 1;
     transition: 0.5s;}
 .containeruan .btn:hover a {letter-spacing: 2px; border-color: rgb(80, 222, 28, 0.25); }
 .containeruan .btn a::before {
@@ -132,7 +119,9 @@
 .text-lightgreen {color: rgb(203, 255, 211) !important}
 .text-green {color: rgb(131, 245, 131);}
 .bg-green {background: rgb(31,99,60); background: linear-gradient(90deg, rgba(31,99,60,1) 0%, rgba(1,80,34,1) 100%);}
+.bg-mygreen {background-color: #072620;}
 .border-lightgreen {border-color: rgb(203, 255, 211) !important;}
+.bg-black {background-color: #131919 !important;}
 /* Font-size */
 .fs-6 {font-size: 1.05rem !important; }
 .fs-0 {font-size: 2.75rem;}
