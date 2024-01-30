@@ -15,25 +15,25 @@
 </head>
 <body class="bg-black">
     <!-- Barra de navegación con Bootstrap -->
-    <nav class="navbar navbar-expand-lg bg-green">
+    <nav class="navbar navbar-expand-lg bg-green py-0 sticky-top">
         <div class="container-fluid">
-            <a class="navbar-brand texto fs-0 text-green hover" href="#">Pixel Art</a>
+            <a class="navbar-brand texto fs-0 p-0 text-green hover" href="#">Pixel Art</a>
             <button class="navbar-toggler text-lightgreen border-lightgreen" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="text-lightgreen"><i class="fa fa-leaf fs-2" aria-hidden="true"></i></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link text-lightgreen texto" aria-current="page" href="#">Introduction</a>
+                        <a class="nav-link text-lightgreen texto" aria-current="page" href="#whatispixelart">Introduction</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-lightgreen texto" href="#">History</a>
+                        <a class="nav-link text-lightgreen texto" href="#history">History</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-lightgreen texto" href="#">Evolution</a>
+                        <a class="nav-link text-lightgreen texto" href="#evolution">Evolution</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-lightgreen texto" href="#">Gallery</a>
+                        <a class="nav-link text-lightgreen texto" href="#gallery">Gallery</a>
                     </li>
                 </ul>
                 <span class="texto navbar-text text-green d-none d-lg-block">Pixelmania</span>
@@ -42,26 +42,26 @@
     </nav>
 
     <!-- Hero section -->
-    <div id="hero" class="vh-94-1 position-relative">
-        <h1 class="text-center text-lightgreen position-relative top-12 display-1 px-3">PIXEL ART</h1>
-        <div class="containeruan d-flex justify-content-around flex-wrap position-absolute start-50 translate-middle-x bottom-20">
-            <div class="btn position-relative"><a href="#" class="align-items-center d-flex position-absolute h-100 w-100 justify-content-center text-decoration-none overflow-hidden text-lightgreen z-1">
+    <header id="hero" class="vh-94-1 d-flex justify-content-center">
+        <h1 class="text-center text-lightgreen position-relative pt-5 mt-4 display-1 px-3">PIXEL ART</h1>
+        <div class="containeruan d-flex justify-content-around flex-wrap position-absolute bottom-0 mb-5 pb-4">
+            <div class="btn position-relative"><a href="#" class="align-items-center d-flex position-absolute h-100 w-100 justify-content-center text-decoration-none overflow-hidden start-0 top-0 text-lightgreen z-1 rounded-3">
                 <i class="fa fa-paint-brush" aria-hidden="true"></i>
                 ‎
                 Pixel me
                 ‎
                 <i class="fa fa-paint-brush" aria-hidden="true"></i></a></div>
         </div>
-    </div>
+    </header>
 
     <!-- Comienzo del contenedor wrapper -->
     <div id="wrapper" class="container bg-mygreen text-lightgreen">
         <main>
-            <section class="py-3 pt-5" id="whatispixelart">
+            <section class="py-3 pt-5 mt-5" id="whatispixelart">
                 <h2 class="text-center display-5">Introduction</h2>
                 <div class="container">
                     <div class="row d-flex align-items-center">
-                        <div class="col-8">
+                        <div class="col-md-7 col-lg-9 col-12">
                             <p class="fs-5">Pixel art is a form of digital art that uses small, square pixels to create images. It originated alongside early computers and video games, characterized by its nostalgic charm and intricate designs.</p>
                         </div>
                         <div class="col">
@@ -77,7 +77,7 @@
                         <div class="col">
                             <img src="./img/img (14).jpg" class="w-100 rounded-4" alt="Pixel Art image of a valley">
                         </div>
-                        <div class="col-8">
+                        <div class="col-md-7 col-lg-9 col-12 pt-5 pt-md-0">
                             <p class="fs-5">This type of art emerged in the late 1970s and early 1980s, serving as the visual style for classic video games like Pac-Man or Super Mario. Despite technological advancements, pixel art has endured, evolving into a beloved artistic medium cherished for its simplicity.</p>
                         </div>
                     </div>
@@ -87,7 +87,7 @@
                 <h2 class="text-center display-5">Evolution</h2>
                 <div class="container">
                     <div class="row d-flex align-items-center">
-                        <div class="col-9">
+                        <div class="col-md-7 col-lg-9 col-12">
                             <p class="fs-5">So, this lovely style of art has evolved a lot from its beginnings, so much that it has converted to a celebrated art form, with artists pushing its boundaries to create detailed compositions. Pixel art continues to thrive, offering endless opportunities for creativity and innovation in visual storytelling.</p>
                         </div>
                         <div class="col">
@@ -95,42 +95,64 @@
                         </div>
                     </div>
                     <div class="row d-flex align-items-center mt-4">
-                        <div class="col-3">
+                        <div class="col">
                             <img src="./img/img (40).jpg" class="w-100 rounded-4" alt="Pixel Art image with a boat in the sea">
                         </div>
-                        <div class="col-9">
-                            <p class="fs-5">As pixel art continues to thrive, it presents boundless opportunities for artists to explore new techniques, push artistic limits, and captivate audiences with its unique charm and timeless appeal. Besides all of this, artificial intelligence is allowed to recreate images using this style. And it nails it!</p>
+                        <div class=" col-md-7 col-lg-9 col-12">
+                            <p class="fs-5 pt-md-0 pt-4">As pixel art continues to thrive, it presents boundless opportunities for artists to explore new techniques, push artistic limits, and captivate audiences with its unique charm and timeless appeal. Besides all of this, artificial intelligence is allowed to recreate images using this style. And it nails it!</p>
                         </div>
                     </div>
                 </div>
                 </section>
             <section class="py-3" id="gallery">
-                <h2 class="text-center display-5">Gallery</h2>
-                images
-                <div class="container">
-                    <div class="row">
-                        <div class="col"></div>
-                        <div class="col"></div>
-                        <div class="col"></div>
-                        <div class="col"></div>
+                <div class="row row-cols-1 row-cols-md-2 g-4">
+                    <div class="col">
+                      <div class="card">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                      </div>
                     </div>
-                    <div class="row">
-                        <div class="col"></div>
-                        <div class="col"></div>
-                        <div class="col"></div>
-                        <div class="col"></div>
+                    <div class="col">
+                      <div class="card">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                      </div>
                     </div>
-                    <div class="row">
-                        <div class="col"></div>
-                        <div class="col"></div>
-                        <div class="col"></div>
-                        <div class="col"></div>
+                    <div class="col">
+                      <div class="card">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                        </div>
+                      </div>
                     </div>
-                </div>
+                    <div class="col">
+                      <div class="card">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
             </section>
         </main>
         <footer>
-
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo expedita ut itaque. Totam excepturi deleniti facere quibusdam fugiat consequuntur aspernatur tempora! Ex, quos minima sit quia quibusdam culpa pariatur amet.</div>
+                    <div class="col-md-3 col-6">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error amet, sit, assumenda, quam ipsa voluptate aperiam nihil labore beatae itaque voluptatem eaque ullam fugit veniam consectetur commodi corporis quos aut!</div>
+                    <div class="col-md-6 col-12 p-md-0 py-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. At iure fugiat eius consectetur necessitatibus laboriosam ratione laudantium cupiditate, assumenda eos error? Maxime incidunt amet nesciunt maiores assumenda, perspiciatis quasi aperiam!</div>
+                </div>
+            </div>
         </footer>
     </div>
     <script src="./js/bootstrap.bundle.min.js"></script>
