@@ -105,7 +105,7 @@ body {background-image: url("../img/patron.png");}
 .text-lightgreen {color: rgb(203, 255, 211) !important}
 .text-green {color: rgb(131, 245, 131);}
 .bg-green {background: rgb(31,99,60); background: linear-gradient(90deg, rgba(31,99,60,1) 0%, rgba(1,80,34,1) 100%);}
-.bg-othergreen {background: radial-gradient(circle farthest-side at center center, #86da5f 0%, #025123 100%);}
+.bg-othergreen {background: radial-gradient(circle farthest-side at center center, #519333 0%, #025123 95%);}
 .bg-mygreen {background-color: #072620 !important;}
 .bg-darkgreen {background-color: #3e9920;}
 .bg-black {background-color: #131919 !important;}
