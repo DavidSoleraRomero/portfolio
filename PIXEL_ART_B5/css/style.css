@@ -15,10 +15,8 @@ body {background-image: url("../img/patron.png");}
 
 /* Estilo de la hero section */
 #hero {
-    background-image: url("../img/hero3.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50%;}
+    background: url("../img/hero3.jpg") no-repeat fixed 50%;
+    background-size: cover;}
 
 /* Estilo del botón de la hero section - personalizado */
 .containeruan {width: 200px;}
@@ -106,6 +104,10 @@ img:not(.card-img-top):not(#slime):hover {box-shadow:0 0 17.5px .4rem rgba(114, 
 .vh-94-1 {height: 94.1vh;}
 /* Colores */
 .text-lightgreen {color: rgb(203, 255, 211) !important}
+.text-gradient {
+    background: linear-gradient(90deg,rgb(203,255,211) 10%, #54ff7d 50%, rgb(203,255,211) 100%);
+    background-clip: text;
+    color: transparent;}
 .text-green {color: rgb(131, 245, 131);}
 .bg-green {background: rgb(31,99,60); background: linear-gradient(90deg, rgba(31,99,60,1) 0%, rgba(1,80,34,1) 100%);}
 .bg-othergreen {background: radial-gradient(circle farthest-side at center center, #519333 0%, #025123 95%);}
