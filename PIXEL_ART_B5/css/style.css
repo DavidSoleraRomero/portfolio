@@ -14,17 +14,14 @@
 body {background-image: url("../img/patron.png");}
 
 /* Estilo de la hero section */
-#hero {
-    background: url("../img/hero3.jpg") no-repeat fixed 50%;
-    background-size: cover;}
+#hero {background: url("../img/hero3.jpg") no-repeat fixed 50%; background-size: cover;}
 
 /* Estilo del botón de la hero section - personalizado */
 .containeruan {width: 200px;}
 .containeruan .btn {
-    height: 57px;
+    height: 57px; width: 215px;
     margin: 20px;
-    margin-bottom: 40px;
-    width: 215px;}
+    margin-bottom: 40px;}
 .containeruan .btn a {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -39,10 +36,8 @@ body {background-image: url("../img/patron.png");}
 .containeruan .btn a::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 50%;
-    height: 100%;
+    top: 0; left: 0;
+    width: 50%; height: 100%;
     background: linear-gradient(to left, rgba(255,255,255,0.15), transparent);
     transform: skewX(45deg) translateX(0);
     transition: 0.5s;}
@@ -53,16 +48,14 @@ body {background-image: url("../img/patron.png");}
     left: 50%;
     transform: translateX(-50%);
     bottom: -5px;
-    height: 10px;
-    width: 30px;
+    height: 10px; width: 30px;
     background: rgb(63, 238, 10);
     border-radius: 10px;
     transition: 0.5s;
     transition-delay: 0s;}
 .containeruan .btn:hover::before {
     bottom: 0;
-    height: 50%;
-    width: 80%;
+    height: 50%; width: 80%;
     border-radius: 30px;
     transition-delay: 0.5s;}
 .containeruan .btn::after {
@@ -71,8 +64,7 @@ body {background-image: url("../img/patron.png");}
     left: 50%;
     transform: translateX(-50%);
     top: -5px;
-    height: 10px;
-    width: 30px;
+    height: 10px; width: 30px;
     background: rgb(7, 245, 59);
     border-radius: 10px;
     transition: 0.5s;
@@ -99,6 +91,8 @@ body {background-image: url("../img/patron.png");}
 .top-12 {top:12%;}
 /* Color texto al hacer hover */
 .hover:hover {color: #03b364 !important; transition: 1s;}
+/* Border */
+.bct-green {border-top: #0CC05D 3.5px solid;}
 /* Height */
 .vh-94-1 {height: 94.1vh;}
 /* Colores */
@@ -110,6 +104,7 @@ body {background-image: url("../img/patron.png");}
 .text-green {color: rgb(131, 245, 131);}
 .bg-green {background: rgb(31,99,60); background: linear-gradient(90deg, rgba(31,99,60,1) 0%, rgba(1,80,34,1) 100%);}
 .bg-othergreen {background: radial-gradient(circle farthest-side at center center, #519333 0%, #025123 95%);}
+.bg-footergreen {background-color: #033629 !important;}
 .bg-mygreen {background-color: #072620 !important;}
 .bg-darkgreen {background-color: #3e9920;}
 .bg-black {background-color: #131919 !important;}
@@ -121,4 +116,3 @@ body {background-image: url("../img/patron.png");}
 .form-check-input:focus{border-color:#3deb2d;outline:0;box-shadow:0 0 0 .25rem rgba(36, 197, 22, 0.25)}
 .form-check-input:checked{background-color:#34b523;border-color:#269208}
 .form-control:focus {border-color:#3deb2d; box-shadow:0 0 0 .25rem rgba(36, 197, 22, 0.25)}
-/* Footer */
