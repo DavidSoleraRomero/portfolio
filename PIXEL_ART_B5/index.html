@@ -70,7 +70,7 @@
                 <div class="container">
 
                     <!-- Fila -->
-                    <div class="row d-flex align-items-center">
+                    <div class="row d-flex align-items-center px-3">
                         <div class="col-md-7 col-lg-9 col-12 px-3 px-md-5">
                             <p class="fs-5">Pixel art is a form of digital art that uses small, square pixels to create images. It originated alongside early computers and video games, characterized by its nostalgic charm and intricate designs.</p>
                         </div>
@@ -92,7 +92,7 @@
                 <div class="container">
                 
                     <!-- Fila -->
-                    <div class="row d-flex align-items-center">
+                    <div class="row d-flex align-items-center px-3">
                         <div class="col">
                             <img src="./img/img29.png" class="w-100 rounded-4" alt="Pixel Art image of a valley">
                         </div>
@@ -113,7 +113,7 @@
                 <div class="container">
 
                     <!-- Fila 1-->
-                    <div class="row d-flex align-items-center">
+                    <div class="row d-flex align-items-center px-3">
 
                         <div class="col-md-7 col-lg-9 col-12 px-3 px-md-5">
                             <p class="fs-5">So, this lovely style of art has evolved a lot from its beginnings, so much that it has converted to a celebrated art form, with artists pushing its boundaries to create detailed compositions. Pixel art continues to thrive, offering endless opportunities for creativity and innovation in visual storytelling.</p>
@@ -125,7 +125,7 @@
                     </div>
                     
                     <!-- Fila 2-->
-                    <div class="row d-flex align-items-center mt-4">
+                    <div class="row d-flex align-items-center mt-4 px-3">
 
                         <div class="col">
                             <img src="./img/img30.png" class="w-100 rounded-4" alt="Pixel Art image with a boat in the sea">
@@ -239,30 +239,73 @@
             <section id="contact">
 
                 <!-- Grid -->
-                <div class="container pt-1">
-                    <h2 class="text-center display-5 pt-5 mt-4 mt-md-3">Contact</h2>
+                <div class="container pt-lg-3 pt-4">
+                    <h2 class="text-center display-5 pt-5 mt-4 mt-md-3 d-none d-lg-block">Contact us</h2>
                     <!-- Fila -->
-                    <div class="row d-flex align-items-center">
-                        <div class="col-lg-7 col-12 order-lg-0 order-1">
+                    <div class="row d-flex align-items-center p-5 p-lg-0">
+                        <div class="col-lg-6 col-12 order-lg-0 order-1">
                             <form>
                                 <div class="mb-3 pt-5 pt-lg-0">
+                                    <div class="container p-0">
+                                        <div class="row">
+                                            <div class="col">
+                                                <label for="name" class="form-label">Name</label>
+                                                <input type="text" class="form-control" id="name" name="name" aria-describedby="nameHelp">
+                                            </div>
+                                            <div class="col">
+                                                <label for="surnames" class="form-label">Surnames</label>
+                                                <input type="text" class="form-control" id="surnames" name="surnames" aria-describedby="nameHelp">
+                                            </div>
+                                        </div>
+                                    </div>       
+                                </div>
+                                <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">Email address</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                                    <input type="email" name="exampleInputEmail1" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                    <div id="emailHelp" class="form-text text-lightgreen">We wont share your information with anyone.</div>
                                 </div>
                                 <div class="form-floating mb-3">
-                                    
-                                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                                    <textarea class="form-control resize-none h-85p" placeholder="Leave a comment here" id="floatingTextarea" name="floatingTextarea"></textarea>
                                     <label for="floatingTextarea" class="text-dark">Comments</label>
                                 </div>
+                                <label for="motivo">Reason that made you write us:</label>
+                                <select class="form-select mb-3" id="motivo" name="motivo" aria-label="Default select example">
+                                    <option value="0" selected>Select an option</option>
+                                    <option value="1">Curiosity about Pixel Art</option>
+                                    <option value="2">Trying to contact the owner</option>
+                                    <option value="3">Want to give a tip on web design</option>
+                                    <option value="4">Im claiming my rights of an image</option>
+                                </select>
                                 <div class="mb-3 form-check">
                                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                                    <label class="form-check-label" for="exampleCheck1"><a class="cursor-pointer text-decoration-none text-lightgreen hoverdos" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Agreed with the terms</a></label>
                                 </div>
-                                <button id="greenbutton" type="submit" class="btn btn-primary bg-othergreen border-lightgreen sombra">Submit</button>
+                                <button type="submit" class="btn btn-primary bg-othergreen border-lightgreen sombra greenbutton">Send</button>
                             </form>
+                            
+                            <!-- Modal -->
+                            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                <div class="modal-content bg-mygreen">
+                                    <div class="modal-header ">
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel"><strong>Terms and conditions</strong></h1>
+                                    <button type="button" class="btn-close bg-darkgreen" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                    <p><strong>Access:</strong> By accessing this website, we assume you accept these terms and conditions. Do not continue to use Pixel Art World if you do not agree to all the terms and conditions stated on this page.</p>
+                                    <p><strong>External Images:</strong> Pixel Art World may feature images sourced from external providers. These images remain the property of their respective owners and are used under fair use principles or with permission. Pixel Art World does not claim ownership of these images.</p>
+                                    <p><strong>No warranty:</strong> This website is provided "as is," with all faults, and Pixel Art World makes no express or implied representations or warranties, of any kind related to this website</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <!-- Está seleccionado el "Close" para que haga el efecto de cerrarse, ya que
+                                        de momento desconocemos hacia dónde se va a dirigir el formulario -->
+                                        <button type="button" class="btn btn-primary bg-othergreen border-lightgreen sombra greenbutton" data-bs-dismiss="modal">Understrood</button>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-lg-5 col-12 order-lg-1 pt-2 py-lg-0 d-flex justify-content-center"><img class="w-75 rounded-4" src="./img/img35.png" alt="Contact image with green tones in pixel art"></div>
+                        <div class="col-lg-6 col-12 order-lg-1 pt-2 py-lg-0 d-flex justify-content-center"><img class="w-perso rounded-4" src="./img/img35.png" alt="Contact image with green tones in pixel art"></div>
                     </div>
                 </div>
 
