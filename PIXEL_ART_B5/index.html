@@ -245,41 +245,47 @@
                     <!-- Fila -->
                     <div class="row d-flex align-items-center p-5 p-lg-0">
                         <div class="col-lg-6 col-12 order-lg-0 order-1">
-                            <form>
-                                <div class="mb-3 pt-5 pt-lg-0">
+                            <form action="" method="post" onsubmit="return validacion()">
+                                <div class="mb-1 pt-5 pt-lg-0">
                                     <div class="container p-0">
                                         <div class="row">
                                             <div class="col">
                                                 <label for="name" class="form-label">Name</label>
                                                 <input type="text" class="form-control" id="name" name="name" aria-describedby="nameHelp">
+                                                <div id="nameHelp" class="form-text text-danger">Required name</div>
                                             </div>
                                             <div class="col">
                                                 <label for="surnames" class="form-label">Surnames</label>
                                                 <input type="text" class="form-control" id="surnames" name="surnames" aria-describedby="nameHelp">
+                                                <div id="surnamesHelp" class="form-text text-danger">Required surname/s</div>
                                             </div>
                                         </div>
                                     </div>       
                                 </div>
-                                <div class="mb-3">
+                                <div class="mb-1">
                                     <label for="exampleInputEmail1" class="form-label">Email address</label>
                                     <input type="email" name="exampleInputEmail1" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                    <div id="emailHelp" class="form-text text-lightgreen">We wont share your information with anyone.</div>
+                                    <div id="emailHelp" class="form-text text-danger">Your email is required</div>
                                 </div>
-                                <div class="form-floating mb-3">
+                                <div class="form-floating">
                                     <textarea class="form-control resize-none h-85p" placeholder="Leave a comment here" id="floatingTextarea" name="floatingTextarea"></textarea>
                                     <label for="floatingTextarea" class="text-dark">Comments</label>
+                                    <div id="commentsHelp" class="form-text text-danger">Comments are required</div>
                                 </div>
                                 <label for="motivo">Reason that made you write us:</label>
-                                <select class="form-select mb-3" id="motivo" name="motivo" aria-label="Default select example">
+                                <div id="motivoHelp" class="form-text text-danger">An option is required</div>
+                                <select class="form-select mb-4" id="motivo" name="motivo" aria-label="Default select example">
                                     <option value="0" selected>Select an option</option>
                                     <option value="1">Curiosity about Pixel Art</option>
                                     <option value="2">Trying to contact the owner</option>
                                     <option value="3">Want to give a tip on web design</option>
                                     <option value="4">Im claiming my rights of an image</option>
+                                    <option value="5">Other reason</option>
                                 </select>
-                                <div class="mb-3 form-check">
-                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="exampleCheck1" name="exampleCheck1">
                                     <label class="form-check-label" for="exampleCheck1"><a class="cursor-pointer text-decoration-none text-lightgreen hoverdos" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Agreed with the terms</a></label>
+                                    <div id="checkHelp" class="form-text text-danger">Agree the terms and conditions</div>
                                 </div>
                                 <button type="submit" class="btn btn-primary bg-othergreen border-lightgreen sombra greenbutton">Send</button>
                             </form>
@@ -300,13 +306,13 @@
                                     <div class="modal-footer">
                                         <!-- Está seleccionado el "Close" para que haga el efecto de cerrarse, ya que
                                         de momento desconocemos hacia dónde se va a dirigir el formulario -->
-                                        <button type="button" class="btn btn-primary bg-othergreen border-lightgreen sombra greenbutton" data-bs-dismiss="modal">Understrood</button>
+                                        <button type="button" class="btn btn-primary bg-othergreen border-lightgreen sombra greenbutton" data-bs-dismiss="modal">Understood</button>
                                     </div>
                                 </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-12 order-lg-1 pt-2 py-lg-0 d-flex justify-content-center"><img class="w-perso rounded-4" src="./img/img35.png" alt="Contact image with green tones in pixel art"></div>
+                        <div class="col-lg-6 col-12 order-lg-1 pt-2 py-lg-0 d-flex justify-content-center"><img class="w-perso rounded-4" src="../../PIXEL_ART_B5/img/img35.png" alt="Contact image with green tones in pixel art"></div>
                     </div>
                 </div>
 
@@ -328,7 +334,9 @@
         </footer>
     </div>
     
-    <!-- Enlazado a JavaScript -->
+    <!-- Enlazado a JavaScripts -->
     <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/validation.js"></script>
+
 </body>
 </html>

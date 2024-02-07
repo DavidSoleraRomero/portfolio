@@ -122,3 +122,8 @@ body {background-image: url("../img/patron.png");}
 .form-check-input:checked{background-color:#34b523;border-color:#269208}
 .form-select:focus, .btn-close:focus, .form-control:focus 
 {border-color:#3deb2d; box-shadow:0 0 0 .25rem rgba(36, 197, 22, 0.25)}
+/* Errores del formulario ocultos */
+.form-novalidado:focus, .form-novalidado:focus, .form-novalidado {
+    border-color:rgb(252, 84, 84); 
+    box-shadow:0 0 0 .25rem rgba(241, 57, 57, 0.25)}
+.form-text {visibility: hidden;}
