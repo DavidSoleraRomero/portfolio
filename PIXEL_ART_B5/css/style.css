@@ -108,7 +108,8 @@ body {background-image: url("../img/patron.png");}
     color: transparent;}
 .text-green {color: rgb(131, 245, 131);}
 .bg-green {background: rgb(31,99,60); background: linear-gradient(90deg, rgb(54, 132, 48) 0%, #14532a 100%);}
-.bg-othergreen {background: radial-gradient(circle farthest-side at center center, #519333 0%, #025123 95%) !important;}
+.bg-othergreen {background: radial-gradient(circle farthest-side at center center, #519333 0%, #01481f 95%) !important;}
+.bg-accbg {background: radial-gradient(circle farthest-side at center center, #2f541d 0%, #04682e 95%) !important;}
 .bg-footergreen {background-color: #033629 !important;}
 .bg-mygreen {background-color: #072620 !important;}
 .bg-darkgreen {background-color: #3e9920 !important;}
@@ -123,9 +124,9 @@ body {background-image: url("../img/patron.png");}
 .form-check-input:checked{background-color:#34b523;border-color:#269208}
 .form-select:focus, .btn-close:focus, .form-control:focus 
 {border-color:#3deb2d; box-shadow:0 0 0 .25rem rgba(36, 197, 22, 0.25)}
-.accordion-button:focus {border-color:#34c70b;box-shadow:0 0 0 .2rem rgba(36, 197, 22, 0.25)}
-.accordion-item, .accordion-button, .accordion-body, .accordion-collapse {border-color:#269208 !important;}
-.accordion-button {border-bottom: 2px solid #269208 !important;}
+.accordion-button:focus {border-color:#34c70b;box-shadow:0 0 0 .25rem rgba(18, 106, 10, 0.25) !important}
+.accordion-item, .accordion-button, .accordion-body, .accordion-collapse {border-color:#195c06 !important;}
+.accordion-button {box-shadow:0 0 0 .1rem rgba(18, 106, 10, 0.25) !important}
 /* Errores del formulario ocultos */
 .form-novalidado:focus, .form-novalidado:focus, .form-novalidado {
     border-color:rgb(252, 84, 84); 
