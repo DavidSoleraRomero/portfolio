@@ -14,7 +14,7 @@
 body {background-image: url("../img/patron.png");}
 
 /* Estilo de la hero section */
-#hero {background: url("../img/hero3.jpg") no-repeat fixed 50%; background-size: cover;}
+#hero {background: url("../img/herowebp.webp") no-repeat fixed 40%; background-size: cover;}
 
 /* Estilo del botón de la hero section - personalizado */
 .containeruan {width: 200px;}
@@ -76,7 +76,7 @@ body {background-image: url("../img/patron.png");}
     border-radius: 30px;
     transition-delay: 0.5s;}
 .containeruan .btn:nth-child(1):before, .containeruan .btn:nth-child(1)::after {
-    background: #005105;
+    background: #51a056;
     box-shadow: 0 0 5px #036d11,
         0 0 15px #107526,
         0 0 30px #077a04,
@@ -103,15 +103,16 @@ body {background-image: url("../img/patron.png");}
 /* Colores */
 .text-lightgreen {color: rgb(203, 255, 211) !important}
 .text-gradient {
-    background: linear-gradient(90deg,rgb(203,255,211) 10%, #54ff7d 50%, rgb(203,255,211) 100%);
+    background: linear-gradient(90deg,#83f403 10%, #bee83f 50%, #7ad100 100%);
     background-clip: text;
     color: transparent;}
 .text-green {color: rgb(131, 245, 131);}
-.bg-green {background: rgb(31,99,60); background: linear-gradient(90deg, rgba(31,99,60,1) 0%, rgba(1,80,34,1) 100%);}
-.bg-othergreen {background: radial-gradient(circle farthest-side at center center, #519333 0%, #025123 95%);}
+.bg-green {background: rgb(31,99,60); background: linear-gradient(90deg, rgb(54, 132, 48) 0%, #14532a 100%);}
+.bg-othergreen {background: radial-gradient(circle farthest-side at center center, #519333 0%, #025123 95%) !important;}
 .bg-footergreen {background-color: #033629 !important;}
 .bg-mygreen {background-color: #072620 !important;}
-.bg-darkgreen {background-color: #3e9920;}
+.bg-darkgreen {background-color: #3e9920 !important;}
+.bg-accgreen {background: radial-gradient(circle farthest-side at center center, #1c3610 0%, #012c13 95%) !important;}
 .bg-black {background-color: #131919 !important;}
 .border-lightgreen {border-color: rgb(203, 255, 211) !important;}
 /* Font-size */
@@ -122,6 +123,9 @@ body {background-image: url("../img/patron.png");}
 .form-check-input:checked{background-color:#34b523;border-color:#269208}
 .form-select:focus, .btn-close:focus, .form-control:focus 
 {border-color:#3deb2d; box-shadow:0 0 0 .25rem rgba(36, 197, 22, 0.25)}
+.accordion-button:focus {border-color:#34c70b;box-shadow:0 0 0 .2rem rgba(36, 197, 22, 0.25)}
+.accordion-item, .accordion-button, .accordion-body, .accordion-collapse {border-color:#269208 !important;}
+.accordion-button {border-bottom: 2px solid #269208 !important;}
 /* Errores del formulario ocultos */
 .form-novalidado:focus, .form-novalidado:focus, .form-novalidado {
     border-color:rgb(252, 84, 84); 
