@@ -97,7 +97,7 @@ let func = function (parametroUno) {
 }
 
 console.log(func("Opción") + 1);
-// Estas se pueden pasar como parámetros (callback)
+// Estas se pueden pasar como parámetros (callback) y estas provocan un comportamiento diferente en la función que las contiene
 function getCopyRight(name, year, callback) {
     return callback(name, year); // llama a la función que se llame como el callback pasado y devuelve el resultado de esta
 }
