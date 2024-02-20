@@ -70,6 +70,48 @@ let numberAddress = Number(address);
 console.log(booleanAddress);
 console.log(numberAddress);
 
+/* FUNCIONES - También provocan hoisting como var */
 
+function printGreet() {
+    console.log("Hello, World!");
+}
 
+printGreet();
 
+function getGreet() {
+    let greet = "Hello, World!";
+    return greet;
+}
+
+console.log(getGreet());
+
+function sum(num1 = 0, num2 = 0) { // 0 <-- Le damos un valor por defecto si no se pasa valor
+    let sum = num1 + num2;
+    return sum;
+}
+
+/* Tipos de funciones */
+/* Anónimas --> Se usan cuando no vamos a reutilizar el código pero queremos encapsularlo */
+let func = function (parametroUno) { 
+    return parametroUno + ": ";
+}
+
+console.log(func("Opción") + 1);
+// Estas se pueden pasar como parámetros (callback)
+function getCopyRight(name, year, callback) {
+    return callback(name, year); // llama a la función que se llame como el callback pasado y devuelve el resultado de esta
+}
+
+let formatWithPipe = function(name, year) {
+    return name + " | " + year;
+}
+
+getCopyRight("David", 2024, formatWithPipe); // Podríamos usar cualquier función anónima que trabaje con los parámetros
+// También se pueden declarar estas funciones anónimas en la llamada a la función
+
+/* Funciones autoinvocadas */
+(function(name, year){
+    console.log(name, year);
+}
+)("David", 2024); // Estas funciones se ejecutan de manera inmediata
+                  // Pueden no tener parámetros
