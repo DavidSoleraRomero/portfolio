@@ -1,6 +1,13 @@
 /* Validación de JS para formulario de Contacto
    Para el archivo index.html en PIXEL_ART_B5_JS */
 
+function estaRelleno(id) {
+    if ((id == "" | id == null | id.replace(/\s/g, "") == "")) {
+        return false;
+    }
+    return true;
+}
+
 function validaComments() {
     let id = document.getElementById("floatingTextarea").value
     if (id == "" | id == null | id.replace(/\s/g, "") == "") {
@@ -51,6 +58,20 @@ function validaApellidos() {
     return true;
 }
 
+function validaPassword() {
+    let id = document.getElementById('exampleInputpassword1').value;
+    if (id = "" | id == null | id.replace(/\s/g, "") == "") {
+        document.getElementById("passwordHelp").style.visibility="visible";
+        return false;
+    }
+    if (id.length < 8 || id.length > 15 || ! /[a-zñ]/.test(id) || ! /[A-ZÑ]/.test(id) || ! /[^a-zA-ZñÑ0-9]/.test(id)) {
+        document.getElementById("passwordHelp").style.visibility="visible";
+        return false;
+    }
+    document.getElementById("passwordHelp").style.visibility="hidden";
+    return true;
+}
+
 function validaNombre() {
     let id = document.getElementById("name").value;
     if (id == "" | id == null | id.replace(/\s/g, "") == "")  {
@@ -62,7 +83,7 @@ function validaNombre() {
 }
 
 function validacion() {
-    if (validaNombre() && validaApellidos() && validaEmail() && validaComments() && validaSelect() && validaCheckbox()) {
+    if (validaNombre() && validaApellidos() && validaEmail()&& validaPassword() && validaComments() && validaSelect() && validaCheckbox()) {
         return true;
     } else {
         alert("Rellene todos los campos indicados.");
