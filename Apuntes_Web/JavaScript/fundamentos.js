@@ -115,3 +115,15 @@ getCopyRight("David", 2024, formatWithPipe); // Podríamos usar cualquier funci�
 }
 )("David", 2024); // Estas funciones se ejecutan de manera inmediata
                   // Pueden no tener parámetros
+
+/* Condicionales */
+
+let hasPizza; // --> Es undefined si no le damos valor
+
+if (hasPizza == true) {
+    console.log("Tengo pizza");
+} else if (hasPizza == false) {
+    console.log("No tengo pizza");
+} else {
+    console.log("Tengo que mirar si hay pizza en la nevera");
+}
