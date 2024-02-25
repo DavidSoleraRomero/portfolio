@@ -127,3 +127,46 @@ if (hasPizza == true) {
 } else {
     console.log("Tengo que mirar si hay pizza en la nevera");
 }
+
+/* Ámbitos */
+
+// Tenemos ámbito global, de función y de bloque
+let global;
+
+function comprobacionAmbito() {
+    console.log(global);
+    let funcion;
+    if (global === undefined) {
+        let bloque;
+    }
+}
+
+// Comentarios --> Tenemos 3 tipos
+
+// En línea
+/* En bloque */
+// #! <-- Al inicio del fichero e indica dónde se encuentre el intérprete de JS
+
+// Interfaces del Web API
+
+/* 
+    Tenemos 4:
+    - Windows (ventana que contiene DOM)
+    - Document (el mismo DOM)
+    - Event (evento en el DOM)
+    - Element (nodo del DOM)
+*/
+
+// Eventos
+
+let elemento = document.querySelector("input");
+
+elemento.addEventListener("click", function (event) {
+    console.log("Has hecho click")
+})
+
+window.addEventListener("copy", function (event) {
+    event.preventDefault();
+
+    console.warn("Intento de copia de imagen, será notificado");
+})
