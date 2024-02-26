@@ -169,4 +169,19 @@ window.addEventListener("copy", function (event) {
     event.preventDefault();
 
     console.warn("Intento de copia de imagen, será notificado");
-})
+});
+
+// Podemos añadir el evento directamente -->
+
+document.querySelector(".test").addEventListener("click", function(event) {
+    alert("Se ha hecho un click sobre el botón")
+});
+
+document.addEventListener("contextmenu", function(event) {
+    event.preventDefault();
+});
+
+// También podemos evitar que el evento se propague hacia los padres
+document.querySelector(".test").addEventListener("contextmenu", function(event) {
+    event.stopPropagation(); // <-- Usando esta función
+});
