@@ -70,6 +70,118 @@ let numberAddress = Number(address);
 console.log(booleanAddress);
 console.log(numberAddress);
 
+/* FUNCIONES - También provocan hoisting como var */
 
+function printGreet() {
+    console.log("Hello, World!");
+}
 
+printGreet();
 
+function getGreet() {
+    let greet = "Hello, World!";
+    return greet;
+}
+
+console.log(getGreet());
+
+function sum(num1 = 0, num2 = 0) { // 0 <-- Le damos un valor por defecto si no se pasa valor
+    let sum = num1 + num2;
+    return sum;
+}
+
+/* Tipos de funciones */
+/* Anónimas --> Se usan cuando no vamos a reutilizar el código pero queremos encapsularlo */
+let func = function (parametroUno) { 
+    return parametroUno + ": ";
+}
+
+console.log(func("Opción") + 1);
+// Estas se pueden pasar como parámetros (callback) y estas provocan un comportamiento diferente en la función que las contiene
+function getCopyRight(name, year, callback) {
+    return callback(name, year); // llama a la función que se llame como el callback pasado y devuelve el resultado de esta
+}
+
+let formatWithPipe = function(name, year) {
+    return name + " | " + year;
+}
+
+getCopyRight("David", 2024, formatWithPipe); // Podríamos usar cualquier función anónima que trabaje con los parámetros
+// También se pueden declarar estas funciones anónimas en la llamada a la función
+
+/* Funciones autoinvocadas */
+(function(name, year){
+    console.log(name, year);
+}
+)("David", 2024); // Estas funciones se ejecutan de manera inmediata
+                  // Pueden no tener parámetros
+
+/* Condicionales */
+
+let hasPizza; // --> Es undefined si no le damos valor
+
+if (hasPizza == true) {
+    console.log("Tengo pizza");
+} else if (hasPizza == false) {
+    console.log("No tengo pizza");
+} else {
+    console.log("Tengo que mirar si hay pizza en la nevera");
+}
+
+/* Ámbitos */
+
+// Tenemos ámbito global, de función y de bloque
+let global;
+
+function comprobacionAmbito() {
+    console.log(global);
+    let funcion;
+    if (global === undefined) {
+        let bloque;
+    }
+}
+
+// Comentarios --> Tenemos 3 tipos
+
+// En línea
+/* En bloque */
+// #! <-- Al inicio del fichero e indica dónde se encuentre el intérprete de JS
+
+// Interfaces del Web API
+
+/* 
+    Tenemos 4:
+    - Windows (ventana que contiene DOM)
+    - Document (el mismo DOM)
+    - Event (evento en el DOM)
+    - Element (nodo del DOM)
+*/
+
+// Eventos
+
+let elemento = document.querySelector("input");
+
+elemento.addEventListener("click", function (event) {
+    console.log("Has hecho click")
+})
+
+window.addEventListener("copy", function (event) {
+    event.preventDefault();
+
+    console.warn("Intento de copia de imagen, será notificado");
+});
+
+// Podemos añadir el evento directamente -->
+
+document.querySelector(".test").addEventListener("click", function(event) {
+    alert("Se ha hecho un click sobre el botón")
+});
+
+document.addEventListener("contextmenu", function(event) {
+    event.preventDefault();
+});
+
+// También podemos evitar que el evento se propague hacia los padres
+document.querySelector(".test").addEventListener("contextmenu", function(event) {
+    event.stopPropagation(); // <-- Usando esta función
+});
